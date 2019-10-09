@@ -1,9 +1,11 @@
 using System;
+using System.Collections.Generic;
+using Shelter;
 
 namespace newMVCproject.Models
 {
     public class ListViewModel
     {
-        public string Name {get; set;}
+        public List<Cat> cats {get; set;}
     }
 }
