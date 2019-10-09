@@ -37,3 +37,4 @@ C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCpr
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.csproj.CopyComplete
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.dll
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.pdb
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shelter\Index.cshtml.g.cs
