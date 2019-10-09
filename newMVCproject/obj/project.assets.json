@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {
+      "Shelter/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Shelter.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shelter.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Shelter/1.0.0": {
+      "type": "project",
+      "path": "../Shelter.Shared/Shelter/Shelter.csproj",
+      "msbuildProject": "../Shelter.Shared/Shelter/Shelter.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [
+      "Shelter >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\thomas\\.nuget\\packages\\": {},
@@ -36,7 +55,11 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter\\Shelter.csproj": {
+              "projectPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter\\Shelter.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
