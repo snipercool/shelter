@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Shelter;
 
 namespace newMVCproject.Controllers
 {
@@ -6,6 +7,8 @@ namespace newMVCproject.Controllers
     {
         public IActionResult Index()
         {   
+            var cats = new List<Cat>{};
+            cats.add(newCat);
             ViewData["Message"]="Hello, This is my view";
             return View();
         }
@@ -14,5 +17,6 @@ namespace newMVCproject.Controllers
             ViewData["Message"]="Hello, Welcome to HelloWorld Application";
             return View();
         }
+
     }
 }
