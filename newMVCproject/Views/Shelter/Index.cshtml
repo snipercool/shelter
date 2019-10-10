@@ -1,0 +1,9 @@
+@model ListViewModel
+
+<p>Hello</p>
+<ul>
+    @foreach (var item in Model.cats)
+    {
+        <li>@item.Name - @item.DateOfBirth - @item.DateOfArrival</li>
+    }
+</ul>
