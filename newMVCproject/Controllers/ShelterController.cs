@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Shelter;
-using System.Collections.Generic;
 
 namespace newMVCproject.Controllers
 {
