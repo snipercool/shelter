@@ -1,37 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\newMVCproject\\newMVCproject.csproj": {}
+    "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\newMVCproject\\newMVCproject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\newMVCproject\\newMVCproject.csproj": {
+    "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\newMVCproject\\newMVCproject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\newMVCproject\\newMVCproject.csproj",
+        "projectUniqueName": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\newMVCproject\\newMVCproject.csproj",
         "projectName": "newMVCproject",
-        "projectPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\newMVCproject\\newMVCproject.csproj",
-        "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\newMVCproject\\obj\\",
+        "projectPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\newMVCproject\\newMVCproject.csproj",
+        "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\newMVCproject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
-                "projectPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj"
+              "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
+                "projectPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj"
               }
             }
           }
@@ -66,27 +64,25 @@
         }
       }
     },
-    "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
+    "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj",
         "projectName": "Shelter.Shared",
-        "projectPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj",
-        "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\obj\\",
+        "projectPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj",
+        "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
