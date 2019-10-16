@@ -4,6 +4,6 @@
 <ul>
     @foreach (var item in Model.cats)
     {
-        <li><a asp-controller="Shelter" asp-action="Details" asp-route-id=@item.Id>@item.Name</a></li>
+        <li><a asp-controller="Shelter" asp-action="Details" asp-route-id=@item.Id>@item.Name</a> <button><a asp-controller="Shelter" asp-action="Confirm">Delete</a></button></li>
     }
 </ul>
