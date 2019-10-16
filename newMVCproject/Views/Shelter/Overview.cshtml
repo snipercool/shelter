@@ -4,6 +4,6 @@
 <ul>
     @foreach (var item in Model.cats)
     {
-        <li>@item.Name - @item.DateOfBirth - @item.DateOfArrival</li>
+        <li><a asp-controller="Shelter" asp-action="Details">@item.Name</a></li>
     }
 </ul>

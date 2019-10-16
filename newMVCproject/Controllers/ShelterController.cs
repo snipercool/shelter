@@ -7,7 +7,7 @@ namespace newMVCproject.Controllers
 {
     public class ShelterController:Controller
     {
-        public IActionResult Index()
+        public IActionResult Overview()
         {   
             var cats = new List<Cat>{};
             cats.Add(new Cat("Felix","19/01/2005",true, true, "23/09/2019"));
@@ -15,7 +15,7 @@ namespace newMVCproject.Controllers
             cats.Add(new Cat("Misty","01/01/2001",true, true, "12/06/2009"));
             return View(new ListViewModel { cats = cats});
         }
-        public IActionResult CatList()
+        public IActionResult Details()
         {
             return View(new ListViewModel());
         }

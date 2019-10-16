@@ -24,7 +24,6 @@ C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCpr
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.TagHelpers.output.cache
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.RazorCoreGenerate.cache
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shared\List.cshtml.g.cs
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -37,4 +36,5 @@ C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCpr
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.csproj.CopyComplete
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.dll
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.pdb
-C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shelter\Index.cshtml.g.cs
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shelter\Overview.cshtml.g.cs
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shelter\Details.cshtml.g.cs

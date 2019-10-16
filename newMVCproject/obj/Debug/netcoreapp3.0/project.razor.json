@@ -14354,13 +14354,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Shelter\\Details.cshtml",
+      "TargetPath": "Views\\Shelter\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "Views\\Shelter\\Overview.cshtml",
+      "TargetPath": "Views\\Shelter\\Overview.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14376,11 +14381,6 @@
     {
       "FilePath": "Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Shelter\\Index.cshtml",
-      "TargetPath": "Views\\Shelter\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
