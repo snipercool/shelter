@@ -1,6 +1,6 @@
 using System;
 
-namespace Shelter
+namespace Shelter.Shared
 {
     public abstract class Employee
     {

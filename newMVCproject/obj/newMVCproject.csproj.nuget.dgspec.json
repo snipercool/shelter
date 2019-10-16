@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter\\Shelter.csproj": {
-                "projectPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter\\Shelter.csproj"
+              "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
+                "projectPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter\\Shelter.csproj": {
+    "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter\\Shelter.csproj",
-        "projectName": "Shelter",
-        "projectPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter\\Shelter.csproj",
+        "projectUniqueName": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj",
+        "projectName": "Shelter.Shared",
+        "projectPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter.Shared.csproj",
         "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\Shelter\\obj\\",
+        "outputPath": "C:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\project_git\\shelter\\Shelter.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

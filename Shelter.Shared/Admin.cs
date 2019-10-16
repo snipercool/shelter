@@ -1,6 +1,6 @@
 using System;
 
-namespace Shelter
+namespace Shelter.Shared
 {
     public class Admin : Employee
     {

@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Shelter;
+using Shelter.Shared;
 
 namespace newMVCproject.Models
 {

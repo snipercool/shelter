@@ -6,7 +6,6 @@ C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCpr
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.RazorAssemblyInfo.cs
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.AssemblyInfoInputs.cache
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.AssemblyInfo.cs
-C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\Shelter.exe
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\appsettings.Development.json
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\appsettings.json
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
@@ -18,8 +17,6 @@ C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCpr
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\newMVCproject.pdb
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\newMVCproject.Views.dll
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\newMVCproject.Views.pdb
-C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\Shelter.dll
-C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\Shelter.pdb
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.TagHelpers.input.cache
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.TagHelpers.output.cache
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.RazorCoreGenerate.cache
@@ -38,3 +35,6 @@ C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCpr
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.pdb
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shelter\Overview.cshtml.g.cs
 C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shelter\Details.cshtml.g.cs
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\Shelter.Shared.exe
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\Shelter.Shared.dll
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\project_git\shelter\newMVCproject\bin\Debug\netcoreapp3.0\Shelter.Shared.pdb

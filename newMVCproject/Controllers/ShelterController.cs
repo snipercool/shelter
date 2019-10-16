@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Shelter;
+using Shelter.Shared;
 using newMVCproject.Models;
 using System.Linq;
 

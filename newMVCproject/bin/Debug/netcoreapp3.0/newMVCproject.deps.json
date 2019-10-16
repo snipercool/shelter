@@ -24,7 +24,7 @@
     ".NETCoreApp,Version=v3.0": {
       "newMVCproject/1.0.0": {
         "dependencies": {
-          "Shelter": "1.0.0",
+          "Shelter.Shared": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.0.0.0",
@@ -315,12 +315,12 @@
           "newMVCproject.dll": {}
         }
       },
-      "Shelter/1.0.0": {
+      "Shelter.Shared/1.0.0": {
         "runtime": {
-          "Shelter.dll": {}
+          "Shelter.Shared.dll": {}
         },
         "compile": {
-          "Shelter.dll": {}
+          "Shelter.Shared.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.0.0.0": {
@@ -2023,7 +2023,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Shelter/1.0.0": {
+    "Shelter.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
