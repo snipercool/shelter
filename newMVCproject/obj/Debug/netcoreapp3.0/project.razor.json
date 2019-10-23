@@ -14364,18 +14364,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Shelter\\edit.cshtml",
+      "TargetPath": "Views\\Shelter\\edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shelter\\Overview.cshtml",
       "TargetPath": "Views\\Shelter\\Overview.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shelter\\Confirm.cshtml",
-      "TargetPath": "Views\\Shelter\\Confirm.cshtml",
+      "FilePath": "Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "Views\\Shelter\\Delete.cshtml",
+      "TargetPath": "Views\\Shelter\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -39,5 +39,22 @@ namespace newMVCproject.Controllers
 
             return View(targetCat);
         }
+
+        public IActionResult Delete(int id)
+        {
+            var cats = GetCats();
+            var targetcat = getTargetCat(cats, id);
+
+            return View(targetcat);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var cats = GetCats();
+            var targetcat = getTargetCat(cats, id);
+
+            return View(targetcat);
+        }
+        
     }
 }

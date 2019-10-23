@@ -78,4 +78,5 @@ C:\Users\vanhu\Desktop\2019-2020\asp.net\shelter\newMVCproject\obj\Debug\netcore
 C:\Users\vanhu\Desktop\2019-2020\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.RazorTargetAssemblyInfo.cs
 C:\Users\vanhu\Desktop\2019-2020\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.Views.pdb
 C:\Users\vanhu\Desktop\2019-2020\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.csproj.CopyComplete
-C:\Users\vanhu\Desktop\2019-2020\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shelter\Confirm.cshtml.g.cs
+C:\Users\vanhu\Desktop\2019-2020\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shelter\Delete.cshtml.g.cs
+C:\Users\vanhu\Desktop\2019-2020\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\Razor\Views\Shelter\edit.cshtml.g.cs
