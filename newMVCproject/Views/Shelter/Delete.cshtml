@@ -2,10 +2,18 @@
 
 <table>
   <tr>
-    <td style="font-weight: bold">Are you sure you want to delete @Model.Name </td>
+    <td style="font-weight: bold">
+      <p>
+        Are you sure you want to delete <em>@Model.Name</em> ?
+      </p> 
+    </td>
   </tr>
   <tr>
-    <td> <a>Yes</a> </td>
-    <td> <a>No</a></td>
+    <form asp-controller="Shelter" asp-action="DoDelete">
+      <input asp-for="Id" type="hidden">
+      <button type="submit">Delete</button>
+    </form>
   </tr>
+
+
 </table>

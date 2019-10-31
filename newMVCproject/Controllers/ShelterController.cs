@@ -8,7 +8,8 @@ namespace newMVCproject.Controllers
 {
     public class ShelterController:Controller
     {
-        public List<Cat> GetCats(){
+
+       public List<Cat> GetCats(){
             var cats = new List<Cat>{};
             cats.Add(new Cat(0,"Felix","19/01/2005",true, true, "23/09/2019"));
             cats.Add(new Cat(1,"Bacardi","22/07/2008",true, false, "12/06/2018"));
@@ -43,9 +44,19 @@ namespace newMVCproject.Controllers
         public IActionResult Delete(int id)
         {
             var cats = GetCats();
-            var targetcat = getTargetCat(cats, id);
+            var targetCat = getTargetCat(cats,id);
+            
+            return View(targetCat);
+        }
 
-            return View(targetcat);
+        [HttpPost]
+        public IActionResult DoDelete(int id)
+        {
+            var cats = GetCats();
+            
+
+            return RedirectToAction(nameof(Overview));
+
         }
 
         public IActionResult Edit(int id)
