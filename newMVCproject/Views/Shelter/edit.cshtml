@@ -1,6 +1,5 @@
 @model Shelter.Shared.Cat
-<!-- put thingies in form (request.form) -->
-<form action="submit.asp" method="post">
+<form asp-action="DoEdit" asp-controller="Shelter" method="post">
 
     <table>
     <tr>
@@ -8,12 +7,14 @@
     </tr>
     <tr>
         <td style="font-weight: bold">Are you sure you want to update @Model.Name </td>
+        <input asp-for="Id" type="hidden">
     </tr>
     <tr>
-        <!-- make yes update name -->
-        <td>  <input name="command" type="submit" value="Yes" asp-controller="Shelter" asp-action="Overview" /></td>
+        <td>
+      <button type="submit">edit</button></td>
         <td> <a asp-controller="Shelter" asp-action="Overview">No</a></td>
     </tr>
     </table>
 </form>
+
 

@@ -53,7 +53,12 @@ namespace newMVCproject.Controllers
         public IActionResult DoDelete(int id)
         {
             var cats = GetCats();
-            
+            var target = cats.FirstOrDefault(x => x.Id == id);
+            if (target == default(Cat))
+            {
+                return NotFound();
+            }
+           cats.Remove(target);
 
             return RedirectToAction(nameof(Overview));
 
@@ -65,6 +70,16 @@ namespace newMVCproject.Controllers
             var targetcat = getTargetCat(cats, id);
 
             return View(targetcat);
+        }
+
+        public IActionResult DoEdit(int id)
+        {
+            var cats = GetCats();
+
+
+
+
+            return RedirectToAction(nameof(Overview));
         }
         
     }
