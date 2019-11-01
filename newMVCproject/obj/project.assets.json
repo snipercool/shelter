@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\Shelter\\newMVCproject\\newMVCproject.csproj",
+      "projectUniqueName": "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\shelter\\newMVCproject\\newMVCproject.csproj",
       "projectName": "newMVCproject",
-      "projectPath": "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\Shelter\\newMVCproject\\newMVCproject.csproj",
+      "projectPath": "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\shelter\\newMVCproject\\newMVCproject.csproj",
       "packagesPath": "C:\\Users\\timothy\\.nuget\\packages\\",
-      "outputPath": "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\Shelter\\newMVCproject\\obj\\",
+      "outputPath": "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\shelter\\newMVCproject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -54,8 +54,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\Shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
-              "projectPath": "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\Shelter\\Shelter.Shared\\Shelter.Shared.csproj"
+            "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
+              "projectPath": "D:\\school\\2de_jaar_imd\\1ste_semester\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj"
             }
           }
         }

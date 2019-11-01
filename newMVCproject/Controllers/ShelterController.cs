@@ -72,13 +72,13 @@ namespace newMVCproject.Controllers
             return View(targetcat);
         }
 
-        public IActionResult DoEdit(int id)
+        public IActionResult DoEdit(int id, string name)
         {
             var cats = GetCats();
-
-
-
-
+            var targetCat = getTargetCat(cats,id);
+            /*  doesn't work
+            targetCat.Name = name;
+            */
             return RedirectToAction(nameof(Overview));
         }
         
