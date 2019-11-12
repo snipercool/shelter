@@ -12,31 +12,32 @@ namespace newMVCproject.Controllers
         {   
             
             return View(AnimalDatabase.Shelter);
+            //new ListViewModel{ cats = cats}
         }
 
         public IActionResult Details(int id)
         {
-            var targetCat = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
 
-            return View(targetCat);
+            return View(targetAnimal);
         }
 
         public IActionResult Delete(int id)
         {
-            var targetCat = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
             
-            return View(targetCat);
+            return View(targetAnimal);
         }
 
         [HttpPost]
         public IActionResult DoDelete(int id)
         {
-            var target = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
-            if (target == default(Cat))
+            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            if (targetAnimal == default(Cat))
             {
                 return NotFound();
             }
-           //cats.Remove(target);
+           //cats.Remove(targetAnimal);
 
             return RedirectToAction(nameof(Overview));
 
@@ -44,17 +45,21 @@ namespace newMVCproject.Controllers
 
         public IActionResult Edit(int id)
         {
-            var targetcat = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
-
-            return View(targetcat);
+            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            if (targetAnimal == default(Cat))
+                {
+                    return NotFound();
+                }
+            return View(targetAnimal);
         }
 
         public IActionResult DoEdit(int id, string name)
         {
-            var targetCat = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
-            /*  doesn't work
-            targetCat.Name = name;
-            */
+            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            if (targetAnimal == default(Cat))
+                {
+                    return NotFound();
+                }
             return RedirectToAction(nameof(Overview));
         }
         
