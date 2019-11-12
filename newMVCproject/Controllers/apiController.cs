@@ -13,11 +13,10 @@ namespace newMVCproject.Controllers
 {
     public class apiController : ControllerBase 
     {
-        [Route("api/shelters")]
+        //[Route("api/shelters")]
         
 
-        [Route("api/shelters/<id>/animals")]
-        //
+        //[Route("api/shelters/<id>/animals")]
 
     }
 }
