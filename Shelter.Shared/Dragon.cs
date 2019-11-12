@@ -4,7 +4,11 @@ namespace Shelter.Shared
 {
     public class Dragon : Animal
     {
-        public Dragon(int Id, string Name, string DateOfBirth, bool IsChecked, bool KidFriendly, string DateOfArrival)
-        : base(Id, Name, DateOfBirth, IsChecked, KidFriendly, DateOfArrival){}
+        public override int Id {get; set;}
+        public override string Name {get; set;}
+        public override string DateOfBirth {get; set;}
+        public override bool IsChecked {get; set;}
+        public override bool KidFriendly {get; set;}
+        public override string DateOfArrival {get; set;}
     }
 }
