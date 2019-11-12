@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace newMVCproject.Controllers
 {
-    public class ShelterController:Controller
+    public class ShelterController : Controller
     {
         public IActionResult Overview()
         {   
