@@ -37,8 +37,7 @@ namespace newMVCproject.Controllers
             {
                 return NotFound();
             }
-           //cats.Remove(targetAnimal);
-
+            AnimalDatabase.Shelter.Cats.Remove(targetAnimal);
             return RedirectToAction(nameof(Overview));
 
         }
