@@ -122,3 +122,13 @@ D:\school\2de_jaar_imd\1ste_semester\asp.net\shelter\newMVCproject\bin\Debug\net
 D:\school\2de_jaar_imd\1ste_semester\asp.net\shelter\newMVCproject\bin\Debug\netcoreapp3.0\Shelter.Shared.pdb
 D:\school\2de_jaar_imd\1ste_semester\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.Views.pdb
 D:\school\2de_jaar_imd\1ste_semester\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.csproj.CopyComplete
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.csprojAssemblyReference.cache
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\staticwebassets\newMVCproject.StaticWebAssets.Manifest.cache
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\staticwebassets\newMVCproject.StaticWebAssets.xml
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.RazorAssemblyInfo.cache
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.RazorAssemblyInfo.cs
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.AssemblyInfoInputs.cache
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.AssemblyInfo.cs
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.dll
+C:\Users\thomas\Desktop\school\imd\2de_jaar\asp.net\shelter\newMVCproject\obj\Debug\netcoreapp3.0\newMVCproject.pdb
