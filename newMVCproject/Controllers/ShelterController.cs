@@ -10,8 +10,8 @@ namespace newMVCproject.Controllers
     {
         public IActionResult Overview()
         {   
-            var cats = GetCats();
-            return View(new ListViewModel { cats = cats });
+            
+            return View(AnimalDatabase.Shelter);
         }
 
         public IActionResult Details(int id)
@@ -36,7 +36,7 @@ namespace newMVCproject.Controllers
             {
                 return NotFound();
             }
-           cats.Remove(target);
+           //cats.Remove(target);
 
             return RedirectToAction(nameof(Overview));
 
