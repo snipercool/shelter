@@ -60,6 +60,7 @@ namespace newMVCproject.Controllers
                 {
                     return NotFound();
                 }
+            targetAnimal.Name = name;
             return RedirectToAction(nameof(Overview));
         }
         
