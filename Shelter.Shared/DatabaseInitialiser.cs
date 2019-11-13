@@ -4,34 +4,34 @@ using Microsoft.Extensions.Logging;
 
 namespace Shelter.Shared
 {
-  public interface IDatabaseInitializer
-  {
-    void Initialize();
-  }
-
-  public class DatabaseInitializer : IDatabaseInitializer
-  {
-    private ShelterContext _context;
-    private ILogger<DatabaseInitializer> _logger;
-    public DatabaseInitializer(ShelterContext context, ILogger<DatabaseInitializer> logger)
+    public interface IDatabaseInitializer
     {
-      _context = context;
-      _logger = logger;
+        void Initialize();
     }
-    public void Initialize()
+
+    public class DatabaseInitializer : IDatabaseInitializer
     {
-      try
-      {
+        private ShelterContext _context;
+        private ILogger<DatabaseInitializer> _logger;
+        public DatabaseInitializer(ShelterContext context, ILogger<DatabaseInitializer> logger)
+        {
+        _context = context;
+        _logger = logger;
+        }
+        public void Initialize()
+        {
+            try
+        {
         if (_context.Database.EnsureCreated())
         {
-          AddData();
+            AddData();
         }
-      }
-      catch (Exception ex)
-      {
-        _logger.LogCritical(ex, "Error occurred while creating database");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogCritical(ex, "Error occurred while creating database");
 
-      }
+        }
     }
 
     private void AddData()
@@ -54,6 +54,11 @@ namespace Shelter.Shared
       _context.Breweries.Add(brewery);
 
       _context.SaveChanges(); */
+
+        Cats = new List<Cat> {
+            new Cat {Id = 1, Name = "Felix", DateOfBirth = "19/01/2005", IsChecked = true, KidFriendly = true, DateOfArrival = "23/09/2019"},
+            new Cat {Id = 2, Name = "Bacardi", DateOfBirth = "22/07/2008", IsChecked = true, KidFriendly = false, DateOfArrival = "12/06/2018"},
+            new Cat {Id = 3, Name = "Misty", DateOfBirth = "01/01/2001", IsChecked = true, KidFriendly = true, DateOfArrival = "12/06/2009"}
+        }
     }
-  }
 }
