@@ -2,7 +2,7 @@ using System;
 
 namespace Shelter.Shared
 {
-    public abstract class Employee
+    public abstract class Employee : BaseDbClass
     {
        public Employee(string name, string DateOfBirth, string Gender, string Mail){
             this.Name = Name;

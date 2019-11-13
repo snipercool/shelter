@@ -2,7 +2,7 @@ using System;
 
 namespace Shelter.Shared
 {
-    public abstract class Animal
+    public abstract class Animal : BaseDbClass
     {
         public abstract int Id { get; set; }
         public abstract string Name { get; set; }
