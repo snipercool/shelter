@@ -8,15 +8,22 @@ using Microsoft.Extensions.Logging;
 using newMVCproject.Models;
 using Shelter.Shared;
 using System.Net.Http.Headers;
+using Microsoft.Extensions.Logging;
 
 namespace newMVCproject.Controllers
 {
-    public class apiController : ControllerBase 
+    [Route("/api")]
+    public class ShelterAPIController : Controller 
     {
-        //[Route("api/shelters")]
-        
 
-        //[Route("api/shelters/<id>/animals")]
+        public ShelterAPIController(){
 
+        }
+
+        [Route("shelters")]
+        public IActionResult GetAllShelters()
+        {
+            return Ok(.Shelters);
+        }
     }
 }
