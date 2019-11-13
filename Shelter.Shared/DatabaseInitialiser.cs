@@ -60,6 +60,9 @@ namespace Shelter.Shared
                 new Cat {Id = 2, Name = "Bacardi", DateOfBirth = "22/07/2008", IsChecked = true, KidFriendly = false, DateOfArrival = "12/06/2018"},
                 new Cat {Id = 3, Name = "Misty", DateOfBirth = "01/01/2001", IsChecked = true, KidFriendly = true, DateOfArrival = "12/06/2009"}
             }
+
+            Animals = new List<Animals>{}
+            Animals.AddRange(Cats);
         }
         _context.Shelters.Add(shelter);
         _context.SaveChanges();
