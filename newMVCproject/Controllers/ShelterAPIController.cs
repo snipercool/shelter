@@ -14,7 +14,7 @@ namespace newMVCproject.Controllers
     [Route("/api")]
     public class ShelterAPIController : Controller 
     {
-
+        private readonly ShelterContext _shelterContext;
         public ShelterAPIController(){
 
         }
@@ -22,7 +22,7 @@ namespace newMVCproject.Controllers
         [Route("shelters")]
         public IActionResult GetAllShelters()
         {
-            return Ok(.Shelters);
+            return Ok(_shelterContext.Shelters);
         }
     }
 }
