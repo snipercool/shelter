@@ -4,7 +4,9 @@ namespace Shelter.Shared
 {
     public class Admin : Employee
     {
-        public Admin(string Name, string DateOfBirth, string Gender, string Mail)
-        : base(Name, DateOfBirth, Gender, Mail){}
+        public override string Name { get; set; }
+        public override string DateOfBirth { get; set; }
+        public override string Gender { get; set;}
+        public override string Mail { get; set;}
     }
 }
