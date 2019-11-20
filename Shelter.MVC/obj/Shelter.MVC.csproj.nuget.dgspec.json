@@ -1,0 +1,137 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Shelter.MVC.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Shelter.MVC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Shelter.MVC.csproj",
+        "projectName": "Shelter.MVC",
+        "projectPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Shelter.MVC.csproj",
+        "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
+                "projectPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "JWT": {
+              "target": "Package",
+              "version": "[5.3.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-rc1-014190\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj",
+        "projectName": "Shelter.Shared",
+        "projectPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\Shelter.Shared.csproj",
+        "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-rc1-014190\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
