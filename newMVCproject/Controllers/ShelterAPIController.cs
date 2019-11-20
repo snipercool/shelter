@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using newMVCproject.Models;
 using Shelter.Shared;
-using System.Net.Http.Headers;
 
 namespace newMVCproject.Controllers
 {
