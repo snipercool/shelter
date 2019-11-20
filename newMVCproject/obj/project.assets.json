@@ -399,6 +399,9 @@
       "Shelter.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite": "3.0.1"
+        },
         "compile": {
           "bin/placeholder/Shelter.Shared.dll": {}
         },
@@ -1013,7 +1016,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "Microsoft.EntityFrameworkCore.Sqlite",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 3.0.1",
       "Shelter.Shared >= 1.0.0"
     ]
   },
@@ -1064,7 +1067,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[3.0.1, )"
           }
         },
         "imports": [

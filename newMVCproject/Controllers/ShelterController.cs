@@ -17,14 +17,14 @@ namespace newMVCproject.Controllers
 
         public IActionResult Details(int id)
         {
-            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            var targetAnimal = AnimalDatabase.Shelter.Animals.FirstOrDefault(x => x.Id == id);
 
             return View(targetAnimal);
         }
 
         public IActionResult Delete(int id)
         {
-            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            var targetAnimal = AnimalDatabase.Shelter.Animals.FirstOrDefault(x => x.Id == id);
             
             return View(targetAnimal);
         }
@@ -32,19 +32,19 @@ namespace newMVCproject.Controllers
         [HttpPost]
         public IActionResult DoDelete(int id)
         {
-            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            var targetAnimal = AnimalDatabase.Shelter.Animals.FirstOrDefault(x => x.Id == id);
             if (targetAnimal == default(Cat))
             {
                 return NotFound();
             }
-            AnimalDatabase.Shelter.Cats.Remove(targetAnimal);
+            AnimalDatabase.Shelter.Animals.Remove(targetAnimal);
             return RedirectToAction(nameof(Overview));
 
         }
 
         public IActionResult Edit(int id)
         {
-            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            var targetAnimal = AnimalDatabase.Shelter.Animals.FirstOrDefault(x => x.Id == id);
             if (targetAnimal == default(Cat))
                 {
                     return NotFound();
@@ -54,7 +54,7 @@ namespace newMVCproject.Controllers
 
         public IActionResult DoEdit(int id, string name)
         {
-            var targetAnimal = AnimalDatabase.Shelter.Cats.FirstOrDefault(x => x.Id == id);
+            var targetAnimal = AnimalDatabase.Shelter.Animals.FirstOrDefault(x => x.Id == id);
             if (targetAnimal == default(Cat))
                 {
                     return NotFound();
