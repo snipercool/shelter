@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 using newMVCproject.Models;
 using Shelter.Shared;
 using System.Net.Http.Headers;
-using Microsoft.Extensions.Logging;
 
 namespace newMVCproject.Controllers
 {

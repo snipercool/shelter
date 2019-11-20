@@ -44,10 +44,15 @@ namespace Shelter.Shared
                 new Caretaker {Name = "John", DateOfBirth = "15/06/1969", Gender = "male", Mail = "John@hotmale.com"},
                 new Caretaker {Name = "Becky", DateOfBirth = "01/01/1997", Gender = "male", Mail = "Becky@hotfemale.com"}
             };
+
+            var _animals = new List<Animal>{};
+            _animals.AddRange(Cats);
+            var _employees = new List<Employee>{};
+            _employees.AddRange(Caretakers);
             var shelter = new Shelter(){
                 name = "shelter1",
-                Animals = new List<Animal>{},
-                Employees = new List<Employee>{}
+                Animals = _animals,
+                Employees = _employees
             };
             _context.Shelters.Add(shelter);
             _context.SaveChanges();
