@@ -4,7 +4,6 @@ namespace Shelter.Shared
 {
     public class Dog : Animal
     {
-        public override int Id {get; set;}
         public override string Name {get; set;}
         public override string DateOfBirth {get; set;}
         public override bool IsChecked {get; set;}

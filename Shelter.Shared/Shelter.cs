@@ -8,5 +8,8 @@ namespace Shelter.Shared
     public string name { get; set; }
     public List<Animal> Animals { get; set; }
     public List<Employee> Employees { get; set; }
+    public void fixLists(){
+      
+    }
   }
 }

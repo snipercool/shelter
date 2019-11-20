@@ -49,8 +49,6 @@ namespace Shelter.Shared
                 Animals = new List<Animal>{},
                 Employees = new List<Employee>{}
             };
-            Animals.AddRange(Cats);
-            Employees.AddRange(Caretakers);
             _context.Shelters.Add(shelter);
             _context.SaveChanges();
         }
