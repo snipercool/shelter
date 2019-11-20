@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Shelter.Shared;
 
-namespace newMVCproject.Models
+namespace Shelter.MVC.Models
 {
     public class ListViewModel
     {

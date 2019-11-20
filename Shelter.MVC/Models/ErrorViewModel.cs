@@ -1,6 +1,6 @@
 using System;
 
-namespace newMVCproject.Models
+namespace Shelter.MVC.Models
 {
     public class ErrorViewModel
     {

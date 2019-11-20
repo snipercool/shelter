@@ -5,10 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using newMVCproject.Models;
+using Shelter.MVC.Models;
 using Shelter.Shared;
 
-namespace newMVCproject.Controllers
+namespace Shelter.MVC.Controllers
 {
     [Route("/api")]
     public class ShelterAPIController : Controller 

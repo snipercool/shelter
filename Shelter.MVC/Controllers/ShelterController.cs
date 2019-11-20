@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Shelter.Shared;
-using newMVCproject.Models;
+using Shelter.MVC.Models;
 using System.Linq;
 
-namespace newMVCproject.Controllers
+namespace Shelter.MVC.Controllers
 {
     public class ShelterController : Controller
     {
