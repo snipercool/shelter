@@ -1,5 +1,3 @@
-using System;
-
 namespace Shelter.Shared
 {
     public abstract class Animal : BaseDbClass
