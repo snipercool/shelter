@@ -33,10 +33,6 @@ namespace Shelter.MVC
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.TokenValidationParameters = new TokenValidationParameters
-                  {
-                NameClaimType = ClaimTypes.NameIdentifier
-                };
 
             }).AddJwtBearer(options =>
             {
@@ -47,12 +43,6 @@ namespace Shelter.MVC
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("read:messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:messages", domain)));
-                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
-            {
-                options.Authority = "https://dev-4t6ikzdl.auth0.com/";
-                options.Audience = "localhost:5001/api";
             });
 
             // register the scope authorization handler
