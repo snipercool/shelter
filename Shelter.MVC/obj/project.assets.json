@@ -5303,7 +5303,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "JWT >= 5.3.1",
-      "Microsoft.AspNetCore.Authentication.JwtBearer",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.0.1",
       "Shelter.Shared >= 1.0.0"
     ]
@@ -5357,7 +5357,7 @@
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[3.0.0, )"
           },
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",

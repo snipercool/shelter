@@ -32,6 +32,10 @@ namespace Shelter.MVC
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.TokenValidationParameters = new TokenValidationParameters
+                  {
+                NameClaimType = ClaimTypes.NameIdentifier
+                };
 
             }).AddJwtBearer(options =>
             {
@@ -42,6 +46,12 @@ namespace Shelter.MVC
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("read:messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:messages", domain)));
+                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = "https://dev-4t6ikzdl.auth0.com/";
+                options.Audience = "localhost:5001/api";
             });
 
             // register the scope authorization handler
@@ -53,32 +63,6 @@ namespace Shelter.MVC
 
              services.AddMvc();
 
-            // 1. Add Authentication Services
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
-            {
-                options.Authority = "https://dev-4t6ikzdl.auth0.com/";
-                options.Audience = "localhost:5001/api";
-            });
-
-            string domain = $"https://{Configuration["Auth0:Domain"]}/";
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                NameClaimType = ClaimTypes.NameIdentifier
-                };
-            }).AddJwtBearer(options =>
-            {
-                options.Authority = domain;
-                options.Audience = Configuration["Auth0:ApiIdentifier"];
-            });
-        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDatabaseInitializer databaseInitializer)
