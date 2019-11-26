@@ -1,6 +1,9 @@
-// HasScopeHandler.cs
-
-public class HasScopeHandler : AuthorizationHandler<HasScopeRequirement>
+using JWT;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Shelter.Shared;
+namespace Shelter.MVC
+{
+    public class HasScopeHandler : AuthorizationHandler<HasScopeRequirement>
 {
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, HasScopeRequirement requirement)
     {
@@ -17,4 +20,5 @@ public class HasScopeHandler : AuthorizationHandler<HasScopeRequirement>
 
         return Task.CompletedTask;
     }
+}
 }

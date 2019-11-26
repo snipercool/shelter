@@ -1,4 +1,9 @@
-public class HasScopeRequirement : IAuthorizationRequirement
+using JWT;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Shelter.Shared;
+namespace Shelter.MVC
+{
+  public class HasScopeRequirement : IAuthorizationRequirement
 {
     public string Issuer { get; }
     public string Scope { get; }
@@ -8,4 +13,5 @@ public class HasScopeRequirement : IAuthorizationRequirement
         Scope = scope ?? throw new ArgumentNullException(nameof(scope));
         Issuer = issuer ?? throw new ArgumentNullException(nameof(issuer));
     }
+}  
 }
