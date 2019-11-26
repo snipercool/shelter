@@ -1,6 +1,5 @@
-using JWT;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Shelter.Shared;
+using System;
+using Microsoft.AspNetCore.Authorization;
 namespace Shelter.MVC
 {
   public class HasScopeRequirement : IAuthorizationRequirement
