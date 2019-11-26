@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\thomas\\Desktop\\school\\imd\\2de_jaar\\asp.net\\shelter\\newMVCproject\\newMVCproject.csproj",
+  "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Shelter.MVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14341,61 +14341,61 @@
     ],
     "CSharpLanguageVersion": 800
   },
-  "RootNamespace": "newMVCproject",
+  "RootNamespace": "Shelter.MVC",
   "Documents": [
     {
-      "FilePath": "Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Shared\\List.cshtml",
-      "TargetPath": "Views\\Shared\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Shelter\\Details.cshtml",
-      "TargetPath": "Views\\Shelter\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Shelter\\edit.cshtml",
-      "TargetPath": "Views\\Shelter\\edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Shelter\\Overview.cshtml",
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\Shelter\\Overview.cshtml",
       "TargetPath": "Views\\Shelter\\Overview.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\Shelter\\edit.cshtml",
+      "TargetPath": "Views\\Shelter\\edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shelter\\Delete.cshtml",
-      "TargetPath": "Views\\Shelter\\Delete.cshtml",
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\Shelter\\Details.cshtml",
+      "TargetPath": "Views\\Shelter\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\Shared\\List.cshtml",
+      "TargetPath": "Views\\Shared\\List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\Shelter\\Delete.cshtml",
+      "TargetPath": "Views\\Shelter\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\vanhu\\Desktop\\2019-2020\\asp.net\\shelter\\Shelter.MVC\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],
