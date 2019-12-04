@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Shelter.MVC.Models;
 using Shelter.Shared;
@@ -24,7 +25,7 @@ namespace Shelter.MVC.Controllers
         // show all shelters
         public IActionResult GetAllShelters() 
         {
-            return Ok(_shelterContext.Shelters);
+            return Ok(_shelterContext.Shelters.Include(X => X.Animals).Include(x => x.Employees));
         }
 
         //show all animals      animals from 1 shelter so make it from certain shelter?
