@@ -29,18 +29,18 @@ namespace Shelter.MVC.Controllers
         }
 
         //show all animals from a certain shelter
-        [Route("shelter{shelterId}/animals")]
-        public IActionResult getAllAnimals()
+        [Route("shelter/{shelterId}/animals")]
+        public IActionResult getAllAnimals(int shelterId)
         {
            //make it only take animals from 1 shelter instead of all the animals
-            return Ok(_shelterContext.Cats); //change cats to animals once we fixed animals in shelterContext    
+            return Ok(_shelterContext.Shelters.Include(X => X.Animals).FirstOrDefault(X => X.Id == shelterId)); 
         }
 
         [Route("showAll")]
         //show animals with all their shelter info
         public IActionResult getAllAnimalsAndShelters()
         {
-          return Ok(_shelterContext.Cats); //change once fixed in other file    
+          return Ok(_shelterContext.Dogs); //change once fixed in other file    
         }
 
     }
