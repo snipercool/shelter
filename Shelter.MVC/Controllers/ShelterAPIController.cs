@@ -25,6 +25,5 @@ namespace Shelter.MVC.Controllers
         {
             return Ok(_shelterContext.Shelters);
         }
-
     }
 }

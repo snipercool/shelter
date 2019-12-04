@@ -44,6 +44,10 @@ namespace Shelter.MVC
             {
                 options.AddPolicy("read:messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:messages", domain)));
             });
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("read:animals", policy => policy.Requirements.Add(new HasScopeRequirement("read:animals", domain)));
+            });
 
             // register the scope authorization handler
             services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
@@ -89,11 +93,7 @@ namespace Shelter.MVC
               name: "default",
               template: "{controller=Home}/{action=Index}/{id?}");
             });
-
             databaseInitializer.Initialize();
-
-
         }
-        
     }
 }
