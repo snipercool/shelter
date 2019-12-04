@@ -14,8 +14,10 @@ namespace Shelter.MVC.Controllers
     public class ShelterAPIController : Controller 
     {
         private readonly ShelterContext _shelterContext;
-        public ShelterAPIController(){
-
+        private readonly ILogger<ShelterAPIController> _logger;
+        public ShelterAPIController(ILogger<ShelterAPIController> logger, ShelterContext sheltercontext){
+            _shelterContext = sheltercontext;
+            _logger = logger;
         }
 
         [Route("shelters")]
@@ -23,5 +25,6 @@ namespace Shelter.MVC.Controllers
         {
             return Ok(_shelterContext.Shelters);
         }
+
     }
 }
