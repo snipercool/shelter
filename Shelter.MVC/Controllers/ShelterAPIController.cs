@@ -27,20 +27,20 @@ namespace Shelter.MVC.Controllers
             return Ok(_shelterContext.Shelters);
         }
 
-        //show all animals      animals from 1 shelter so make it from certain shelter?
+        //show all animals from a certain shelter
         [Route("shelter{shelterId}/animals")]
-        // public action get all animals
         public IActionResult getAllAnimals()
         {
-          return Ok(_shelterContext.Cats);    
+           //make it only take animals from 1 shelter instead of all the animals
+            return Ok(_shelterContext.Cats); //change cats to animals once we fixed animals in shelterContext    
         }
 
-        //show animals with all shelter info     die alle animals laat zien gecombineerd met hun shelter informatie in één platte lijst { animalId, shelterId, animalName, shelterName } of iets gelijkaardig.
-        //[Route("fullList")]
-        // publoc action get all animals with shelter info
-        //{
-        //  return ok();
-        //}
+        [Route("showAll")]
+        //show animals with all their shelter info
+        public IActionResult getAllAnimalsAndShelters()
+        {
+          return Ok(_shelterContext.Cats); //change once fixed in other file    
+        }
 
     }
 }
