@@ -28,19 +28,19 @@ namespace Shelter.MVC.Controllers
             return Ok(_shelterContext.Shelters.Include(X => X.Animals).Include(x => x.Employees));
         }
 
-        //show all animals from a certain shelter
+        
         [Route("shelter/{shelterId}/animals")]
+        //show all animals from a certain shelter
         public IActionResult getAllAnimals(int shelterId)
         {
-           //make it only take animals from 1 shelter instead of all the animals
             return Ok(_shelterContext.Shelters.Include(X => X.Animals).FirstOrDefault(X => X.Id == shelterId)); 
         }
 
         [Route("showAll")]
-        //show animals with all their shelter info
+        //show animals with all their shelter info in list (animalId, shelterId, animalName,shelterName)
         public IActionResult getAllAnimalsAndShelters()
         {
-          return Ok(_shelterContext.Dogs); //change once fixed in other file    
+          return Ok(_shelterContext.Shelters.Include(X => X.Animals).Select(c => new {c.Id, c.name, c.Animals})); //change once fixed in other file    
         }
 
     }
