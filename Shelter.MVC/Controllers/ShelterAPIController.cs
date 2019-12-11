@@ -34,7 +34,7 @@ namespace Shelter.MVC.Controllers
                 names.Add(s.name);
                 names.Add(temp);
             }
-            return Ok(names[1]);
+            return Ok(names);
         }
 
         
