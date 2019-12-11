@@ -41,11 +41,10 @@ namespace Shelter.MVC.Controllers
         public IActionResult getAllAnimalsAndShelters()
         {
             var allAnimals =
-            from Animal in _shelterContext.Shelters.Select(x => x.Animals) 
-            select Animal;
+            from Shelter in _shelterContext.Shelters 
+            select Shelter.Animals;
 
           return Ok(allAnimals);  
         }
-
     }
 }
