@@ -40,7 +40,11 @@ namespace Shelter.MVC.Controllers
         //show animals with all their shelter info in list (animalId, shelterId, animalName,shelterName)
         public IActionResult getAllAnimalsAndShelters()
         {
-          return Ok(_shelterContext.Shelters.Include(X => X.Animals).Select(c => new {c.Id, c.name, c.Animals})); //change once fixed in other file    
+            var allAnimals =
+            from Animal in _shelterContext.Shelters.Select(x => x.Animals) 
+            select Animal;
+
+          return Ok(allAnimals);  
         }
 
     }
