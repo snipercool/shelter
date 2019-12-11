@@ -25,7 +25,14 @@ namespace Shelter.MVC.Controllers
         // show all shelters
         public IActionResult GetAllShelters() 
         {
-            return Ok(_shelterContext.Shelters.Include(X => X.Animals).Include(x => x.Employees));
+            var showShelter = 
+                from Shelter in _shelterContext.Shelters
+                select Shelter;
+            List<String> names = new List<String>();
+            foreach(var s in showShelter){
+                names.Add(s.name);
+            }
+            return Ok(names);
         }
 
         
