@@ -30,9 +30,11 @@ namespace Shelter.MVC.Controllers
                 select Shelter;
             List<String> names = new List<String>();
             foreach(var s in showShelter){
+                var temp = s.Id.ToString();
                 names.Add(s.name);
+                names.Add(temp);
             }
-            return Ok(names);
+            return Ok(names[1]);
         }
 
         
