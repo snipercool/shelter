@@ -51,12 +51,13 @@ namespace Shelter.Shared
             };
 
             var _animals = new List<Animal>{};
+            var _animals2 = new List<Animal>{};
             _animals.AddRange(Cats);
             _animals.AddRange(Dogs);
             var _employees = new List<Employee>{};
             _employees.AddRange(Caretakers);
             var shelter1 = new Shelter {name = "shelter1", Animals = _animals, Employees = _employees};
-            var shelter2 = new Shelter {name = "shelter2", Animals = _animals, Employees = _employees};
+            var shelter2 = new Shelter {name = "shelter2", Animals = _animals2, Employees = _employees};
             _context.Shelters.Add(shelter1);
             _context.Shelters.Add(shelter2);
             _context.SaveChanges();
