@@ -44,6 +44,11 @@ namespace Shelter.Shared
                 new Dog {Id = 5, name = "Barky", DateOfBirth = "22/07/2008", IsChecked = true, KidFriendly = false, DateOfArrival = "12/06/2018"},
                 new Dog {Id = 6, name = "Woef", DateOfBirth = "01/01/2001", IsChecked = true, KidFriendly = true, DateOfArrival = "12/06/2009"}
             };
+            var Cats2 = new List<Cat> {
+                new Cat {Id = 7, name = "johnny", DateOfBirth = "19/01/2005", IsChecked = true, KidFriendly = true, DateOfArrival = "23/09/2019"},
+                new Cat {Id = 8, name = "wodka", DateOfBirth = "22/07/2008", IsChecked = true, KidFriendly = false, DateOfArrival = "12/06/2018"},
+                new Cat {Id = 9, name = "Wiskers", DateOfBirth = "01/01/2001", IsChecked = true, KidFriendly = true, DateOfArrival = "12/06/2009"}
+            };
             var Caretakers = new List<Caretaker> {
                 new Caretaker {Name = "Steve", DateOfBirth = "20/04/1990", Gender = "male", Mail = "Steve@hotmale.com"},
                 new Caretaker {Name = "John", DateOfBirth = "15/06/1969", Gender = "male", Mail = "John@hotmale.com"},
@@ -54,6 +59,7 @@ namespace Shelter.Shared
             var _animals2 = new List<Animal>{};
             _animals.AddRange(Cats);
             _animals.AddRange(Dogs);
+            _animals2.AddRange(Cats2);
             var _employees = new List<Employee>{};
             _employees.AddRange(Caretakers);
             var shelter1 = new Shelter {name = "shelter1", Animals = _animals, Employees = _employees};
