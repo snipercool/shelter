@@ -49,11 +49,22 @@ namespace Shelter.MVC.Controllers
         //show animals with all their shelter info in list (animalId, shelterId, animalName,shelterName)
         public IActionResult getAllAnimalsAndShelters()
         {
-            var allAnimals =
-            from Shelter in _shelterContext.Shelters 
-            select Shelter.Animals;
-
-          return Ok(allAnimals);  
+            var showShelter = 
+                from Shelter in _shelterContext.Shelters
+                select Shelter;
+            List<String> names = new List<String>();
+            foreach(var s in showShelter){
+                var temp = s.Id.ToString();
+                names.Add(s.name);
+                names.Add(temp);
+            }
+           /* var showAnimals =
+                from Animal in _shelterContext.Shelters
+                select Animal;
+            foreach(var s in showAnimals){
+                var screwLife = 
+            }*/
+            return Ok(names); 
         }
     }
 }
