@@ -14,14 +14,9 @@ namespace Shelter.MVC.Controllers
     [Route("/api")]
     public class ShelterAPIController : Controller 
     {
-        private readonly ShelterContext _shelterContext; //delete?
+        private readonly ShelterContext _shelterContext; //delete? change once the rest has been switched to dataAccess
         private readonly IShelterDataAccess _dataAccess;
         private readonly ILogger<ShelterAPIController> _logger;
-        /*public ShelterAPIController(ILogger<ShelterAPIController> logger, ShelterContext sheltercontext)
-        {
-            _shelterContext = sheltercontext;
-            _logger = logger;
-        }*/
         public ShelterAPIController(ILogger<ShelterAPIController> logger, IShelterDataAccess dataAccess)
         {
             _dataAccess = dataAccess;
@@ -35,13 +30,16 @@ namespace Shelter.MVC.Controllers
             return Ok(_dataAccess.GetAllSheltersFull());
         }
 
-        [HttpGet("Shelter/{shelterId)")]
-        public IActionResult getShelterById(int shelterId)
+        [HttpGet("shelter/{shelterId}")]
+        public IActionResult getThisShelterById(int shelterId)
         {
-            var shelter = _dataAccess.GetShelterById(shelterId); ;
+            var shelter = _dataAccess.GetShelterById(shelterId);
             return shelter == default(Shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
         }
  
+        //change from here on out over to dataAccess
+
+
         [HttpGet("shelter/{shelterId}/animals")]
         //show all animals from a certain shelter
         public IActionResult getAllAnimals(int shelterId)
