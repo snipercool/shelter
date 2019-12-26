@@ -28,11 +28,11 @@ namespace Shelter.MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Shelter API", Version = "v1" }); });
             string domain = $"https://{Configuration["Auth0:Domain"]}/";
+            services.AddScoped<IShelterDataAccess, ShelterDataAccess>();
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Shelter API", Version = "v1" }); });
             services.AddAuthentication(options =>
             {
-                services.AddScoped<IShelterDataAccess, ShelterDataAccess>();
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
