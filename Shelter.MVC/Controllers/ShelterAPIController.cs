@@ -62,12 +62,17 @@ namespace Shelter.MVC.Controllers
 
             foreach(var shelter in Shelters){
                 foreach(var a in Animals){
-                    animalsandshelters.Add(a.name);
-                    animalsandshelters.Add(a.Id.ToString());
+                    animalsandshelters.Add(a.name + " " + a.Id.ToString() + " " + shelter.name + " " + shelter.Id.ToString());
+
+
+                // ADD SPACES
+
+                    /*animalsandshelters.Add(a.Id.ToString());
                     animalsandshelters.Add(shelter.name);
-                    animalsandshelters.Add(shelter.Id.ToString());
+                    animalsandshelters.Add(shelter.Id.ToString());*/
                 }
             }
+            
 
             return Ok(animalsandshelters);
 
