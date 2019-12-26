@@ -31,6 +31,7 @@ namespace Shelter.MVC
             string domain = $"https://{Configuration["Auth0:Domain"]}/";
             services.AddAuthentication(options =>
             {
+                services.AddScoped<IShelterDataAccess, ShelterDataAccess>();
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 

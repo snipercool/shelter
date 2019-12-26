@@ -36,8 +36,7 @@ namespace Shelter.MVC.Controllers
             }
             return Ok(names);
         }
-
-        
+ 
         [Route("shelter/{shelterId}/animals")]
         //show all animals from a certain shelter
         public IActionResult getAllAnimals(int shelterId)
@@ -49,7 +48,6 @@ namespace Shelter.MVC.Controllers
         //show animals with all their shelter info in list (animalId, shelterId, animalName,shelterName)
         public IActionResult getAllAnimalsAndShelters()
         {
-
             var Shelters = 
                 from Shelter in _shelterContext.Shelters
                 select Shelter;
@@ -63,19 +61,9 @@ namespace Shelter.MVC.Controllers
             foreach(var shelter in Shelters){
                 foreach(var a in Animals){
                     animalsandshelters.Add(a.name + " " + a.Id.ToString() + " " + shelter.name + " " + shelter.Id.ToString());
-
-
-                // ADD SPACES
-
-                    /*animalsandshelters.Add(a.Id.ToString());
-                    animalsandshelters.Add(shelter.name);
-                    animalsandshelters.Add(shelter.Id.ToString());*/
                 }
             }
-            
-
             return Ok(animalsandshelters);
-
         }
     }
 }
