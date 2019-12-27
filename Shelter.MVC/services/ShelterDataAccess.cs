@@ -13,6 +13,7 @@ namespace Shelter.MVC
 
         IEnumerable<Animal> GetAnimals(int shelterId);
         //Animal GetAnimalByShelterAndId(int shelterId, int animalId);
+        void DoDeleteAnimal(int animalId);
     }
 
      public class ShelterDataAccess : IShelterDataAccess
@@ -54,5 +55,16 @@ namespace Shelter.MVC
         {
             return _context.Shelters.FirstOrDefault(x => x.Id == id);
         }
+
+        public void DoDeleteAnimal(int animalId)
+        {
+            var animalData = _context.Animals
+                .FirstOrDefault(x => x.Id == animalId);
+
+            Animal target = _context.Animals.Find(animalId);
+            _context.Animals.Remove(target);
+            _context.SaveChanges();
+        }
+
      }
 }

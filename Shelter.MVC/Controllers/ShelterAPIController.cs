@@ -27,6 +27,13 @@ namespace Shelter.MVC.Controllers
         // show all shelters
         public IActionResult GetAllShelters() 
         {
+            return Ok(_dataAccess.GetAllShelters());
+        }
+
+        [HttpGet("sheltersFull")]
+        // show all shelters
+        public IActionResult GetAllSheltersFull() 
+        {
             return Ok(_dataAccess.GetAllSheltersFull());
         }
 
@@ -69,6 +76,16 @@ namespace Shelter.MVC.Controllers
             }
             return Ok(animalsandshelters);
           //change to dataAccess show all animals with shelterinfo
+        }
+
+        // from here on out it is alright with dataAccess again
+
+
+        [HttpDelete("deleteAnimal/{animalId}")]
+        public IActionResult DoDeleteAnimal(int animalId)
+        {
+            _dataAccess.DoDeleteAnimal(animalId);
+            return RedirectToAction("GetAllSheltersFull");
         }
     }
 }
