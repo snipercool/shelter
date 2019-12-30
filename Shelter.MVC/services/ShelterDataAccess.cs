@@ -10,10 +10,10 @@ namespace Shelter.MVC
         IEnumerable<Shared.Shelter> GetAllShelters();
         IEnumerable<Shared.Shelter> GetAllSheltersFull();
         Shared.Shelter GetShelterById(int id);
-
         IEnumerable<Animal> GetAnimals(int shelterId);
-        //Animal GetAnimalByShelterAndId(int shelterId, int animalId);
+        Animal GetAnimalByShelterAndId(int shelterId, int animalId);
         void DoDeleteAnimal(int animalId);
+        //void DoUpdateAnimal();
     }
 
      public class ShelterDataAccess : IShelterDataAccess
@@ -37,12 +37,11 @@ namespace Shelter.MVC
                 .Include(shelter => shelter.Employees);
         }
 
-       /* public Animal GetAnimalByShelterAndId(int shelterId, int animalId)
+        public Animal GetAnimalByShelterAndId(int shelterId, int animalId)
         {
             return _context.Animals
-                .Include(animal => animal.name)
                 .FirstOrDefault(x => x.ShelterId == shelterId && x.Id == animalId);
-        }*/
+        }
 
         public IEnumerable<Animal> GetAnimals(int shelterId)
         {
@@ -58,13 +57,13 @@ namespace Shelter.MVC
 
         public void DoDeleteAnimal(int animalId)
         {
-            var animalData = _context.Animals
+            var animalData = _context.Shelters
+                .Include(Shelter => Shelter.Animals)
                 .FirstOrDefault(x => x.Id == animalId);
 
             Animal target = _context.Animals.Find(animalId);
             _context.Animals.Remove(target);
             _context.SaveChanges();
         }
-
      }
 }

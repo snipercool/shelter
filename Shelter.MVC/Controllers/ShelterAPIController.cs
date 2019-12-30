@@ -14,7 +14,6 @@ namespace Shelter.MVC.Controllers
     [Route("/api")]
     public class ShelterAPIController : Controller 
     {
-        private readonly ShelterContext _shelterContext; //delete? change once the rest has been switched to dataAccess
         private readonly IShelterDataAccess _dataAccess;
         private readonly ILogger<ShelterAPIController> _logger;
         public ShelterAPIController(ILogger<ShelterAPIController> logger, IShelterDataAccess dataAccess)
@@ -24,61 +23,46 @@ namespace Shelter.MVC.Controllers
         }
 
         [HttpGet("shelters")]
-        // show all shelters
+        // show all shelters name and id's
         public IActionResult GetAllShelters() 
         {
             return Ok(_dataAccess.GetAllShelters());
         }
 
         [HttpGet("sheltersFull")]
-        // show all shelters
+        // show all shelters full with employees and animals
         public IActionResult GetAllSheltersFull() 
         {
             return Ok(_dataAccess.GetAllSheltersFull());
         }
 
         [HttpGet("shelter/{shelterId}")]
+        //show 1 specific shelters name and id
         public IActionResult getThisShelterById(int shelterId)
         {
             var shelter = _dataAccess.GetShelterById(shelterId);
             return shelter == default(Shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
         }
- 
-        //change from here on out over to dataAccess
 
-
-        [HttpGet("shelter/{shelterId}/animals")]
-        //show all animals from a certain shelter
-        public IActionResult getAllAnimals(int shelterId)
+        [HttpGet("shelter/{shelterId}/animal/{animalId}")]
+        //show all info about 1 specific animal by using it's id and shelter it resides in
+        public IActionResult getAllAnimals(int shelterId, int animalId)
         {
-            return Ok(_shelterContext.Shelters.Include(X => X.Animals).FirstOrDefault(X => X.Id == shelterId)); 
-            // change to dataAccess animalbyshelterandid? 
+            var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
+            return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
         }
 
-        [HttpGet("showAll")]
-        //show animals with all their shelter info in list (animalId, shelterId, animalName,shelterName)
-        public IActionResult getAllAnimalsAndShelters()
+        [HttpGet("showAnimals/{shelterId}")]
+        //show all animals from 1 specific shelter
+        public IActionResult getAnimals(int shelterId)
         {
-           var Shelters = 
-                from Shelter in _shelterContext.Shelters
-                select Shelter;
-            
-            var Animals = 
-                from Animal in _shelterContext.Animals
-                select Animal;
-
-            List<String> animalsandshelters = new List<String>();
-
-            foreach(var shelter in Shelters){
-                foreach(var a in Animals){
-                    animalsandshelters.Add(a.name + " " + a.Id.ToString() + " " + shelter.name + " " + shelter.Id.ToString());
-                }
-            }
-            return Ok(animalsandshelters);
-          //change to dataAccess show all animals with shelterinfo
+            var animals = _dataAccess.GetAnimals(shelterId);
+            return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
         }
 
         // from here on out it is alright with dataAccess again
+        
+        //but they don't work yet!!! freaking errors
 
 
         [HttpDelete("deleteAnimal/{animalId}")]
@@ -87,5 +71,7 @@ namespace Shelter.MVC.Controllers
             _dataAccess.DoDeleteAnimal(animalId);
             return RedirectToAction("GetAllSheltersFull");
         }
+
+        
     }
 }

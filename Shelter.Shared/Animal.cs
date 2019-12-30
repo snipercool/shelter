@@ -7,5 +7,6 @@ namespace Shelter.Shared
         public bool IsChecked { get; set; }
         public bool KidFriendly { get; set; }
         public string DateOfArrival{ get; set; }
+        public int ShelterId { get; set; }
     }
 }
