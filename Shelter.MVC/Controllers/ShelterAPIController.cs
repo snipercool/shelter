@@ -60,18 +60,20 @@ namespace Shelter.MVC.Controllers
             return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
         }
 
-        // from here on out it is alright with dataAccess again
-        
-        //but they don't work yet!!! freaking errors
-
+        //todo: add exceptions/404 when animal to delete,update is not found 
 
         [HttpDelete("deleteAnimal/{animalId}/{shelterId}")]
         public IActionResult DoDeleteAnimal(int shelterId, int animalId)
         {
-             _dataAccess.DeleteAnAnimal(shelterId, animalId);
+            _dataAccess.DeleteAnAnimal(shelterId, animalId);
             return Ok("deleted");
         }
 
-        
+        /*[HttpPut("updateAnimal/{animalId}/{shelterId}")]
+        public IActionResult DoUpdateAnimal(int shelterId, int animalId)
+        {
+            _dataAccess.UpdateAnAnimal(shelterId, animalId);
+            return Ok("test");
+        }*/
     }
 }

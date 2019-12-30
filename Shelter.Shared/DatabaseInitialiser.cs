@@ -44,16 +44,16 @@ namespace Shelter.Shared
                 new Dog {Id = 5, name = "Barky", DateOfBirth = "22/07/2008", IsChecked = true, KidFriendly = false, DateOfArrival = "12/06/2018", ShelterId = 1, Barker = true, Race = "German Sheppard"},
                 new Dog {Id = 6, name = "Woef", DateOfBirth = "01/01/2001", IsChecked = true, KidFriendly = true, DateOfArrival = "12/06/2009", ShelterId = 1, Barker = true, Race = "Tackle"}
             };
-           /* var Cats2 = new List<Cat> {
+            var Cats2 = new List<Cat> {
                 new Cat {Id = 7, name = "johnny", DateOfBirth = "19/01/2005", IsChecked = true, KidFriendly = true, DateOfArrival = "23/09/2019", ShelterId = 2, Declawed = true, Race = "streetcat"},
                 new Cat {Id = 8, name = "wodka", DateOfBirth = "22/07/2008", IsChecked = true, KidFriendly = false, DateOfArrival = "12/06/2018", ShelterId = 2, Declawed = true, Race = "Persian"},
                 new Cat {Id = 9, name = "Wiskers", DateOfBirth = "01/01/2001", IsChecked = true, KidFriendly = true, DateOfArrival = "12/06/2009", ShelterId = 2, Declawed = false, Race = "streetcat"}
-            };*/
-            /*var OtherAnimals = new List<Other> {
+            };
+            var OtherAnimals = new List<Other> {
                 new Other {Id = 10, name = "Gary", DateOfBirth = "19/01/2005", IsChecked = true, KidFriendly = true, DateOfArrival = "23/09/2019", ShelterId = 2, Description = "Gary is a special needs snkae", Kind = "Python snake"},
                 new Other {Id = 11, name = "Cider", DateOfBirth = "22/07/2008", IsChecked = true, KidFriendly = false, DateOfArrival = "12/06/2018", ShelterId = 2, Description = "cider is an overweight rat", Kind = "Asian Black Rat"},
                 new Other {Id = 12, name = "Rocky", DateOfBirth = "01/01/2001", IsChecked = true, KidFriendly = true, DateOfArrival = "12/06/2009", ShelterId = 2, Description = "Rocky doesn't move much", Kind = "pet rock"}
-            };*/
+            };
             var Caretakers = new List<Caretaker> {
                 new Caretaker {Name = "Steve", DateOfBirth = "20/04/1990", Gender = "male", Mail = "Steve@hotmale.com"},
                 new Caretaker {Name = "John", DateOfBirth = "15/06/1969", Gender = "male", Mail = "John@hotmale.com"},
@@ -64,8 +64,8 @@ namespace Shelter.Shared
             var _animals2 = new List<Animal>{};
             _animals.AddRange(Cats);
             _animals.AddRange(Dogs);
-           /* _animals2.AddRange(Cats2);*/
-           // _animals2.AddRange(OtherAnimals);
+            _animals2.AddRange(Cats2);
+            _animals2.AddRange(OtherAnimals);
             var _employees = new List<Employee>{};
             _employees.AddRange(Caretakers);
             var shelter1 = new Shelter {name = "shelter Mechelen", Animals = _animals, Employees = _employees};

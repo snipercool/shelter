@@ -13,7 +13,9 @@ namespace Shelter.MVC
         IEnumerable<Animal> GetAnimals(int shelterId);
         Animal GetAnimalByShelterAndId(int shelterId, int animalId);
         void DeleteAnAnimal(int shelterId, int animalId);
-        //void DoUpdateAnimal();
+        void UpdateAnAnimal(int shelterId, int animalId);
+       // Animal MakeAnAnimal(int shelterId);
+       // addAnimal
     }
 
      public class ShelterDataAccess : IShelterDataAccess
@@ -65,5 +67,18 @@ namespace Shelter.MVC
             _context.SaveChanges();
     
         }
+
+        public void UpdateAnAnimal(int shelterId, int animalId)
+        {
+             var pickedAnimal = _context.Animals
+                .FirstOrDefault(x => x.Id == animalId && x.ShelterId == shelterId);
+
+            //finish this
+        }
+
+        /*public Animal MakeAnAnimal(int shelterId)
+        {
+            return 
+        }*/
      }
 }
