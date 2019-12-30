@@ -65,11 +65,11 @@ namespace Shelter.MVC.Controllers
         //but they don't work yet!!! freaking errors
 
 
-        [HttpDelete("deleteAnimal/{animalId}")]
-        public IActionResult DoDeleteAnimal(int animalId)
+        [HttpDelete("deleteAnimal/{animalId}/{shelterId}")]
+        public IActionResult DoDeleteAnimal(int shelterId, int animalId)
         {
-            _dataAccess.DoDeleteAnimal(animalId);
-            return RedirectToAction("GetAllSheltersFull");
+             _dataAccess.DeleteAnAnimal(shelterId, animalId);
+            return Ok("deleted");
         }
 
         
