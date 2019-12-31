@@ -60,13 +60,16 @@ namespace Shelter.MVC.Controllers
             return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
         }
 
-        //todo: add exceptions/404 when animal to delete,update is not found 
-
         [HttpDelete("deleteAnimal/{animalId}/{shelterId}")]
         public IActionResult DoDeleteAnimal(int shelterId, int animalId)
         {
-            _dataAccess.DeleteAnAnimal(shelterId, animalId);
-            return Ok("deleted");
+           Animal test = _dataAccess.DeleteAnAnimal(shelterId, animalId);
+            if(test == null){
+                return NotFound("error 404: animal or shelter not found");
+            }else {
+                return Ok("deleted animal from database");
+            }
+            
         }
 
         /*[HttpPut("updateAnimal/{animalId}/{shelterId}")]

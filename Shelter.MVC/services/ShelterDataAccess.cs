@@ -12,7 +12,7 @@ namespace Shelter.MVC
         Shared.Shelter GetShelterById(int id);
         IEnumerable<Animal> GetAnimals(int shelterId);
         Animal GetAnimalByShelterAndId(int shelterId, int animalId);
-        void DeleteAnAnimal(int shelterId, int animalId);
+        Animal DeleteAnAnimal(int shelterId, int animalId);
         void UpdateAnAnimal(int shelterId, int animalId);
        // Animal MakeAnAnimal(int shelterId);
        // addAnimal
@@ -58,13 +58,15 @@ namespace Shelter.MVC
                 .FirstOrDefault(x => x.Id == id);
         }
 
-        public void DeleteAnAnimal(int shelterId, int animalId)
+        public Shared.Animal DeleteAnAnimal(int shelterId, int animalId)
         {
             var pickedAnimal = _context.Animals
                 .FirstOrDefault(x => x.Id == animalId && x.ShelterId == shelterId);
 
             _context.Remove(pickedAnimal);
             _context.SaveChanges();
+
+            return pickedAnimal;
     
         }
 
