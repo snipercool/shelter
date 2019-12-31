@@ -63,8 +63,8 @@ namespace Shelter.MVC.Controllers
         [HttpDelete("deleteAnimal/{animalId}/{shelterId}")]
         public IActionResult DoDeleteAnimal(int shelterId, int animalId)
         {
-           Animal test = _dataAccess.DeleteAnAnimal(shelterId, animalId);
-            if(test == null){
+           Animal pickedAnimal = _dataAccess.DeleteAnAnimal(shelterId, animalId);
+            if(pickedAnimal == null){
                 return NotFound("error 404: animal or shelter not found");
             }else {
                 return Ok("deleted animal from database");
@@ -72,11 +72,16 @@ namespace Shelter.MVC.Controllers
             
         }
 
-        /*[HttpPut("updateAnimal/{animalId}/{shelterId}")]
+        //doesn't work yet
+
+       /* [HttpPut("updateAnimal/{animalId}/{shelterId}")]
         public IActionResult DoUpdateAnimal(int shelterId, int animalId)
         {
-            _dataAccess.UpdateAnAnimal(shelterId, animalId);
-            return Ok("test");
+            var pickedAnimal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
+
+           //use UpdateAnAnimal to update
+
+            return Ok("update");
         }*/
     }
 }

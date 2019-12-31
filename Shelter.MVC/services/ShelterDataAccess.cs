@@ -14,7 +14,7 @@ namespace Shelter.MVC
         Animal GetAnimalByShelterAndId(int shelterId, int animalId);
         Animal DeleteAnAnimal(int shelterId, int animalId);
         void UpdateAnAnimal(int shelterId, int animalId);
-       // Animal MakeAnAnimal(int shelterId);
+        //Animal MakeAnAnimal(int shelterId);
        // addAnimal
     }
 
