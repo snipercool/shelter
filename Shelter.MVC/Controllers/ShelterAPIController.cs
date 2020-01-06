@@ -74,14 +74,12 @@ namespace Shelter.MVC.Controllers
 
         //doesn't work yet
 
-       /* [HttpPut("updateAnimal/{animalId}/{shelterId}")]
-        public IActionResult DoUpdateAnimal(int shelterId, int animalId)
+        [HttpPut("updateAnimal/{animalId}/{shelterId}")]
+        public IActionResult DoUpdateAnimal(int shelterId, int animalId,[FromBody]Shared.Animal animal)
         {
             var pickedAnimal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
 
-           //use UpdateAnAnimal to update
-
-            return Ok("update");
-        }*/
+            return Ok(animal);
+        }
     }
 }
