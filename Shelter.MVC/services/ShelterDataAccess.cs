@@ -16,7 +16,7 @@ namespace Shelter.MVC
         void UpdateAnAnimal(int shelterId, int animalId);
         void CreateACat(int shelterId, Shelter.Shared.Cat cat);
         void CreateADog(int shelterId, Shelter.Shared.Dog dog);
-        void CreateAOther(int shelterId, Shelter.Shared.Other other);
+        void CreateAnOther(int shelterId, Shelter.Shared.Other other);
     }
 
      public class ShelterDataAccess : IShelterDataAccess
@@ -109,7 +109,7 @@ namespace Shelter.MVC
             _context.SaveChanges();
         }
 
-        public void CreateAOther(int shelterId, Shelter.Shared.Other other )
+        public void CreateAnOther(int shelterId, Shelter.Shared.Other other )
         {
             var newOther = new Other {
                 name = other.name,

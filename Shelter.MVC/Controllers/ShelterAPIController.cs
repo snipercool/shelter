@@ -82,6 +82,7 @@ namespace Shelter.MVC.Controllers
             return Ok(animal);
         }
 
+        // works from here on out again
 
         [HttpPost("createAnimal/{ShelterId}/Cat")]
         //Create an animal
@@ -103,7 +104,7 @@ namespace Shelter.MVC.Controllers
         //Create an animal
         public IActionResult DoCreateOther(int ShelterId, Shelter.Shared.Other other)
         {
-            _dataAccess.CreateAOther(ShelterId, other);
+            _dataAccess.CreateAnOther(ShelterId, other);
             return Ok();
         }
     }
