@@ -63,7 +63,7 @@ namespace Shelter.MVC.Controllers
         [HttpDelete("deleteAnimal/{animalId}/{shelterId}")]
         public IActionResult DoDeleteAnimal(int shelterId, int animalId)
         {
-           Animal pickedAnimal = _dataAccess.DeleteAnAnimal(shelterId, animalId);
+           Animal pickedAnimal = _dataAccess.DeleteAnimal(shelterId, animalId);
             if(pickedAnimal == null){
                 return NotFound("error 404: animal or shelter not found");
             }else {
@@ -88,7 +88,7 @@ namespace Shelter.MVC.Controllers
         //Create an animal
         public IActionResult DoCreateCat(int ShelterId, Shelter.Shared.Cat cat)
         {
-            _dataAccess.CreateACat(ShelterId, cat);
+            _dataAccess.CreateCat(ShelterId, cat);
             return Ok();
         }
 
@@ -96,7 +96,7 @@ namespace Shelter.MVC.Controllers
         //Create an animal
         public IActionResult DoCreateDog(int ShelterId, Shelter.Shared.Dog dog)
         {
-            _dataAccess.CreateADog(ShelterId, dog);
+            _dataAccess.CreateDog(ShelterId, dog);
             return Ok();
         }
         
@@ -104,7 +104,7 @@ namespace Shelter.MVC.Controllers
         //Create an animal
         public IActionResult DoCreateOther(int ShelterId, Shelter.Shared.Other other)
         {
-            _dataAccess.CreateAnOther(ShelterId, other);
+            _dataAccess.CreateOther(ShelterId, other);
             return Ok();
         }
     }

@@ -12,11 +12,11 @@ namespace Shelter.MVC
         Shared.Shelter GetShelterById(int id);
         IEnumerable<Animal> GetAnimals(int shelterId);
         Animal GetAnimalByShelterAndId(int shelterId, int animalId);
-        Animal DeleteAnAnimal(int shelterId, int animalId);
-        void UpdateAnAnimal(int shelterId, int animalId);
-        void CreateACat(int shelterId, Shelter.Shared.Cat cat);
-        void CreateADog(int shelterId, Shelter.Shared.Dog dog);
-        void CreateAnOther(int shelterId, Shelter.Shared.Other other);
+        Animal DeleteAnimal(int shelterId, int animalId);
+        void UpdateAnimal(int shelterId, int animalId);
+        void CreateCat(int shelterId, Shelter.Shared.Cat cat);
+        void CreateDog(int shelterId, Shelter.Shared.Dog dog);
+        void CreateOther(int shelterId, Shelter.Shared.Other other);
     }
 
      public class ShelterDataAccess : IShelterDataAccess
@@ -59,7 +59,7 @@ namespace Shelter.MVC
                 .FirstOrDefault(x => x.Id == id);
         }
 
-        public Shared.Animal DeleteAnAnimal(int shelterId, int animalId)
+        public Shared.Animal DeleteAnimal(int shelterId, int animalId)
         {
             var pickedAnimal = _context.Animals
                 .FirstOrDefault(x => x.Id == animalId && x.ShelterId == shelterId);
@@ -71,7 +71,7 @@ namespace Shelter.MVC
     
         }
 
-        public void UpdateAnAnimal(int shelterId, int animalId)
+        public void UpdateAnimal(int shelterId, int animalId)
         {
              var pickedAnimal = _context.Animals
                 .FirstOrDefault(x => x.Id == animalId && x.ShelterId == shelterId);
@@ -79,7 +79,7 @@ namespace Shelter.MVC
             //finish this
         }
 
-        public void CreateACat(int shelterId, Shelter.Shared.Cat cat )
+        public void CreateCat(int shelterId, Shelter.Shared.Cat cat )
         {
             var newCat = new Cat {
                 name = cat.name,
@@ -94,7 +94,7 @@ namespace Shelter.MVC
             _context.SaveChanges();
         }
 
-        public void CreateADog(int shelterId, Shelter.Shared.Dog dog )
+        public void CreateDog(int shelterId, Shelter.Shared.Dog dog )
         {
             var newDog = new Dog {
                 name = dog.name,
@@ -109,7 +109,7 @@ namespace Shelter.MVC
             _context.SaveChanges();
         }
 
-        public void CreateAnOther(int shelterId, Shelter.Shared.Other other )
+        public void CreateOther(int shelterId, Shelter.Shared.Other other )
         {
             var newOther = new Other {
                 name = other.name,
