@@ -81,5 +81,30 @@ namespace Shelter.MVC.Controllers
 
             return Ok(animal);
         }
+
+
+        [HttpPost("createAnimal/{ShelterId}/Cat")]
+        //Create an animal
+        public IActionResult DoCreateCat(int ShelterId, Shelter.Shared.Cat cat)
+        {
+            _dataAccess.CreateACat(ShelterId, cat);
+            return Ok();
+        }
+
+        [HttpPost("createAnimal/{ShelterId}/Dog")]
+        //Create an animal
+        public IActionResult DoCreateDog(int ShelterId, Shelter.Shared.Dog dog)
+        {
+            _dataAccess.CreateADog(ShelterId, dog);
+            return Ok();
+        }
+        
+        [HttpPost("createAnimal/{ShelterId}/Others")]
+        //Create an animal
+        public IActionResult DoCreateOther(int ShelterId, Shelter.Shared.Other other)
+        {
+            _dataAccess.CreateAOther(ShelterId, other);
+            return Ok();
+        }
     }
 }

@@ -14,8 +14,9 @@ namespace Shelter.MVC
         Animal GetAnimalByShelterAndId(int shelterId, int animalId);
         Animal DeleteAnAnimal(int shelterId, int animalId);
         void UpdateAnAnimal(int shelterId, int animalId);
-        //Animal MakeAnAnimal(int shelterId);
-       // addAnimal
+        void CreateACat(int shelterId, Shelter.Shared.Cat cat);
+        void CreateADog(int shelterId, Shelter.Shared.Dog dog);
+        void CreateAOther(int shelterId, Shelter.Shared.Other other);
     }
 
      public class ShelterDataAccess : IShelterDataAccess
@@ -78,9 +79,49 @@ namespace Shelter.MVC
             //finish this
         }
 
-        /*public Animal MakeAnAnimal(int shelterId)
+        public void CreateACat(int shelterId, Shelter.Shared.Cat cat )
         {
-            return 
-        }*/
+            var newCat = new Cat {
+                name = cat.name,
+                DateOfBirth = cat.DateOfBirth,
+                IsChecked = cat.IsChecked,
+                KidFriendly = cat.KidFriendly,
+                DateOfArrival = cat.DateOfArrival,
+                ShelterId = shelterId,
+                Declawed = cat.Declawed, 
+                Race = cat.Race};
+            _context.Add(newCat);
+            _context.SaveChanges();
+        }
+
+        public void CreateADog(int shelterId, Shelter.Shared.Dog dog )
+        {
+            var newDog = new Dog {
+                name = dog.name,
+                DateOfBirth = dog.DateOfBirth,
+                IsChecked = dog.IsChecked,
+                KidFriendly = dog.KidFriendly,
+                DateOfArrival = dog.DateOfArrival,
+                ShelterId = shelterId,
+                Barker = dog.Barker, 
+                Race = dog.Race};
+            _context.Add(newDog);
+            _context.SaveChanges();
+        }
+
+        public void CreateAOther(int shelterId, Shelter.Shared.Other other )
+        {
+            var newOther = new Other {
+                name = other.name,
+                DateOfBirth = other.DateOfBirth,
+                IsChecked = other.IsChecked,
+                KidFriendly = other.KidFriendly,
+                DateOfArrival = other.DateOfArrival,
+                ShelterId = shelterId,
+                Description = other.Description, 
+                Kind = other.Kind};
+            _context.Add(newOther);
+            _context.SaveChanges();
+        }
      }
 }
