@@ -13,7 +13,7 @@ namespace Shelter.MVC
         IEnumerable<Animal> GetAnimals(int shelterId);
         Animal GetAnimalByShelterAndId(int shelterId, int animalId);
         Animal DeleteAnimal(int shelterId, int animalId);
-        void UpdateAnimal(int shelterId, int animalId);
+        void UpdateAnimal(int shelterId, int animalId, Shelter.Shared.Animal animal);
         void CreateCat(int shelterId, Shelter.Shared.Cat cat);
         void CreateDog(int shelterId, Shelter.Shared.Dog dog);
         void CreateOther(int shelterId, Shelter.Shared.Other other);
@@ -71,12 +71,22 @@ namespace Shelter.MVC
     
         }
 
-        public void UpdateAnimal(int shelterId, int animalId)
+        public void UpdateAnimal(int shelterId, int animalId, Shelter.Shared.Animal animal )
         {
              var pickedAnimal = _context.Animals
                 .FirstOrDefault(x => x.Id == animalId && x.ShelterId == shelterId);
 
-            //finish this
+            pickedAnimal.name = animal.name;
+            pickedAnimal.DateOfBirth = animal.DateOfBirth;
+            pickedAnimal.IsChecked = animal.IsChecked;
+            pickedAnimal.KidFriendly = animal.KidFriendly;
+            pickedAnimal.DateOfArrival = animal.DateOfArrival;
+            pickedAnimal.ShelterId = animal.ShelterId;
+            pickedAnimal.Id = animal.Id;
+
+            _context.Update(pickedAnimal);
+            _context.SaveChanges();
+        
         }
 
         public void CreateCat(int shelterId, Shelter.Shared.Cat cat )

@@ -72,20 +72,16 @@ namespace Shelter.MVC.Controllers
             
         }
 
-        //doesn't work yet
-
         [HttpPut("updateAnimal/{animalId}/{shelterId}")]
-        public IActionResult DoUpdateAnimal(int shelterId, int animalId,[FromBody]Shared.Animal animal)
+        public IActionResult DoUpdateAnimal(int shelterId, int animalId, Shelter.Shared.Animal animal)
         {
-            var pickedAnimal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
+            _dataAccess.UpdateAnimal(shelterId, animalId, animal);
 
-            return Ok(animal);
+            return Ok();
         }
 
-        // works from here on out again
-
         [HttpPost("createAnimal/{ShelterId}/Cat")]
-        //Create an animal
+        //Create an cat
         public IActionResult DoCreateCat(int ShelterId, Shelter.Shared.Cat cat)
         {
             _dataAccess.CreateCat(ShelterId, cat);
@@ -93,7 +89,7 @@ namespace Shelter.MVC.Controllers
         }
 
         [HttpPost("createAnimal/{ShelterId}/Dog")]
-        //Create an animal
+        //Create a dog
         public IActionResult DoCreateDog(int ShelterId, Shelter.Shared.Dog dog)
         {
             _dataAccess.CreateDog(ShelterId, dog);
@@ -101,7 +97,7 @@ namespace Shelter.MVC.Controllers
         }
         
         [HttpPost("createAnimal/{ShelterId}/Others")]
-        //Create an animal
+        //Create an other animal
         public IActionResult DoCreateOther(int ShelterId, Shelter.Shared.Other other)
         {
             _dataAccess.CreateOther(ShelterId, other);
