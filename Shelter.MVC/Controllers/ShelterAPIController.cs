@@ -67,17 +67,21 @@ namespace Shelter.MVC.Controllers
             if(pickedAnimal == null){
                 return NotFound("error 404: animal or shelter not found");
             }else {
-                return Ok("deleted animal from database");
+                return Ok(pickedAnimal);
             }
             
         }
 
         [HttpPut("updateAnimal/{animalId}/{shelterId}")]
-        public IActionResult DoUpdateAnimal(int shelterId, int animalId, string new_name, string dateOfBirth, bool isChecked, bool kidFriendly, string dateOfArrival, int new_shelterId, int id)
+        public IActionResult DoUpdateAnimal(int shelterId, int animalId, string new_name, string dateOfBirth, bool isChecked, bool kidFriendly, string dateOfArrival, int new_shelterId)
         {
-            _dataAccess.UpdateAnimal(shelterId, animalId, new_name, dateOfBirth, isChecked, kidFriendly, dateOfArrival, new_shelterId, id);
+           Animal pickedAnimal = _dataAccess.UpdateAnimal(shelterId, animalId, new_name, dateOfBirth, isChecked, kidFriendly, dateOfArrival, new_shelterId);
 
-            return Ok();
+             if(pickedAnimal == null){
+                return NotFound("error 404: animal or shelter not found");
+            }else {
+                return Ok(pickedAnimal);
+            }
         }
 
         [HttpPost("createAnimal/{ShelterId}/Cat")]
