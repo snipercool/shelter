@@ -41,7 +41,7 @@ namespace Shelter.MVC.Controllers
         public IActionResult getThisShelterById(int shelterId)
         {
             var shelter = _dataAccess.GetShelterById(shelterId);
-            return shelter == default(Shared.Shelter) ? (IActionResult)NotFound() : Ok(shelter);
+            return shelter == default(Shared.Shelter) ? (IActionResult)NotFound("No shelter found with these parameters") : Ok(shelter);
         }
 
         [HttpGet("shelter/{shelterId}/animal/{animalId}")]
@@ -49,7 +49,7 @@ namespace Shelter.MVC.Controllers
         public IActionResult getAllAnimals(int shelterId, int animalId)
         {
             var animal = _dataAccess.GetAnimalByShelterAndId(shelterId, animalId);
-            return animal == default(Shared.Animal) ? (IActionResult)NotFound() : Ok(animal);
+            return animal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(animal);
         }
 
         [HttpGet("showAnimals/{shelterId}")]
@@ -57,7 +57,7 @@ namespace Shelter.MVC.Controllers
         public IActionResult getAnimals(int shelterId)
         {
             var animals = _dataAccess.GetAnimals(shelterId);
-            return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(animals);
+            return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound("No animals found with these parameters") : Ok(animals);
         }
 
         [HttpDelete("deleteAnimal/{animalId}/{shelterId}")]
@@ -65,7 +65,7 @@ namespace Shelter.MVC.Controllers
         {
             Animal pickedAnimal = _dataAccess.DeleteAnimal(shelterId, animalId);
             
-            return pickedAnimal == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(pickedAnimal);
+            return pickedAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(pickedAnimal);
             
         }
 
@@ -74,31 +74,31 @@ namespace Shelter.MVC.Controllers
         {
             Animal pickedAnimal = _dataAccess.UpdateAnimal(shelterId, animalId, new_name, dateOfBirth, isChecked, kidFriendly, dateOfArrival, new_shelterId);
 
-             return pickedAnimal == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(pickedAnimal);
+             return pickedAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(pickedAnimal);
         }
 
         [HttpPost("createAnimal/{ShelterId}/Cat")]
         //Create an cat
         public IActionResult DoCreateCat(int ShelterId, Shelter.Shared.Cat cat)
         {
-            _dataAccess.CreateCat(ShelterId, cat);
-            return Ok();
+            Animal createdAnimal = _dataAccess.CreateCat(ShelterId, cat);
+            return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
         }
 
         [HttpPost("createAnimal/{ShelterId}/Dog")]
         //Create a dog
         public IActionResult DoCreateDog(int ShelterId, Shelter.Shared.Dog dog)
         {
-            _dataAccess.CreateDog(ShelterId, dog);
-            return Ok();
+            Animal createdAnimal = _dataAccess.CreateDog(ShelterId, dog);
+            return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
         }
         
         [HttpPost("createAnimal/{ShelterId}/Others")]
         //Create an other animal
         public IActionResult DoCreateOther(int ShelterId, Shelter.Shared.Other other)
         {
-            _dataAccess.CreateOther(ShelterId, other);
-            return Ok();
+            Animal createdAnimal = _dataAccess.CreateOther(ShelterId, other);
+            return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
         }
     }
 }
