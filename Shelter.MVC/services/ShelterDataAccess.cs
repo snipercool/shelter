@@ -13,7 +13,7 @@ namespace Shelter.MVC
         IEnumerable<Animal> GetAnimals(int shelterId);
         Animal GetAnimalByShelterAndId(int shelterId, int animalId);
         Animal DeleteAnimal(int shelterId, int animalId);
-        void UpdateAnimal(int shelterId, int animalId, Shelter.Shared.Animal animal);
+        void UpdateAnimal(int shelterId, int animalId, string new_name, string dateOfBirth, bool isChecked, bool kidFriendly, string dateOfArrival, int new_shelterId, int id);
         void CreateCat(int shelterId, Shelter.Shared.Cat cat);
         void CreateDog(int shelterId, Shelter.Shared.Dog dog);
         void CreateOther(int shelterId, Shelter.Shared.Other other);
@@ -71,18 +71,18 @@ namespace Shelter.MVC
     
         }
 
-        public void UpdateAnimal(int shelterId, int animalId, Shelter.Shared.Animal animal )
+        public void UpdateAnimal(int shelterId, int animalId, string new_name, string dateOfBirth, bool isChecked, bool kidFriendly, string dateOfArrival, int new_shelterId, int id)
         {
              var pickedAnimal = _context.Animals
                 .FirstOrDefault(x => x.Id == animalId && x.ShelterId == shelterId);
 
-            pickedAnimal.name = animal.name;
-            pickedAnimal.DateOfBirth = animal.DateOfBirth;
-            pickedAnimal.IsChecked = animal.IsChecked;
-            pickedAnimal.KidFriendly = animal.KidFriendly;
-            pickedAnimal.DateOfArrival = animal.DateOfArrival;
-            pickedAnimal.ShelterId = animal.ShelterId;
-            pickedAnimal.Id = animal.Id;
+            pickedAnimal.name = new_name;
+            pickedAnimal.DateOfBirth = dateOfBirth;
+            pickedAnimal.IsChecked = isChecked;
+            pickedAnimal.KidFriendly = kidFriendly;
+            pickedAnimal.DateOfArrival = dateOfArrival;
+            pickedAnimal.ShelterId = new_shelterId;
+            pickedAnimal.Id = id;
 
             _context.Update(pickedAnimal);
             _context.SaveChanges();
