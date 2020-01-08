@@ -63,25 +63,18 @@ namespace Shelter.MVC.Controllers
         [HttpDelete("deleteAnimal/{animalId}/{shelterId}")]
         public IActionResult DoDeleteAnimal(int shelterId, int animalId)
         {
-           Animal pickedAnimal = _dataAccess.DeleteAnimal(shelterId, animalId);
-            if(pickedAnimal == null){
-                return NotFound("error 404: animal or shelter not found");
-            }else {
-                return Ok(pickedAnimal);
-            }
+            Animal pickedAnimal = _dataAccess.DeleteAnimal(shelterId, animalId);
+            
+            return pickedAnimal == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(pickedAnimal);
             
         }
 
         [HttpPut("updateAnimal/{animalId}/{shelterId}")]
         public IActionResult DoUpdateAnimal(int shelterId, int animalId, string new_name, string dateOfBirth, bool isChecked, bool kidFriendly, string dateOfArrival, int new_shelterId)
         {
-           Animal pickedAnimal = _dataAccess.UpdateAnimal(shelterId, animalId, new_name, dateOfBirth, isChecked, kidFriendly, dateOfArrival, new_shelterId);
+            Animal pickedAnimal = _dataAccess.UpdateAnimal(shelterId, animalId, new_name, dateOfBirth, isChecked, kidFriendly, dateOfArrival, new_shelterId);
 
-             if(pickedAnimal == null){
-                return NotFound("error 404: animal or shelter not found");
-            }else {
-                return Ok(pickedAnimal);
-            }
+             return pickedAnimal == default(IEnumerable<Animal>) ? (IActionResult)NotFound() : Ok(pickedAnimal);
         }
 
         [HttpPost("createAnimal/{ShelterId}/Cat")]
