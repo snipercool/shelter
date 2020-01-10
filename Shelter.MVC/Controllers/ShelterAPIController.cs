@@ -27,7 +27,6 @@ namespace Shelter.MVC.Controllers
         /// <response code="401">Authorization required</response>
         /// <response code="404">Item not found</response>  
         [HttpGet("shelters")]
-        [Authorize]
         // show all shelters name and id's
         public IActionResult GetAllShelters()
         {
@@ -38,7 +37,6 @@ namespace Shelter.MVC.Controllers
         /// <response code="401">Authorization required</response>
         /// <response code="404">Item not found</response>  
         [HttpGet("sheltersFull")]
-        [Authorize]
         // show all shelters full with employees and animals
         public IActionResult GetAllSheltersFull()
         {
@@ -63,7 +61,6 @@ namespace Shelter.MVC.Controllers
         /// <response code="401">Authorization required</response>
         /// <response code="404">Item not found</response>  
         [HttpGet("shelter/{shelterId}/animal/{animalId}")]
-        [Authorize]
         //show all info about 1 specific animal by using it's id and shelter it resides in
         public IActionResult getAllAnimals(int shelterId, int animalId)
         {
@@ -76,7 +73,6 @@ namespace Shelter.MVC.Controllers
         /// <response code="401">Authorization required</response>
         /// <response code="404">Item not found</response>  
         [HttpGet("showAnimals/{shelterId}")]
-        [Authorize]
         //show all animals from 1 specific shelter
         public IActionResult getAnimals(int shelterId)
         {
@@ -90,7 +86,6 @@ namespace Shelter.MVC.Controllers
         /// <response code="401">Authorization required</response>
         /// <response code="404">Item not found</response>  
         [HttpDelete("deleteAnimal/{animalId}/{shelterId}")]
-        [Authorize]
         public IActionResult DoDeleteAnimal(int shelterId, int animalId)
         {
             Animal pickedAnimal = _dataAccess.DeleteAnimal(shelterId, animalId);
@@ -111,7 +106,6 @@ namespace Shelter.MVC.Controllers
         /// <response code="401">Authorization required</response>
         /// <response code="404">Item not found</response>  
         [HttpPut("updateAnimal/{animalId}/{shelterId}")]
-        [Authorize]
         public IActionResult DoUpdateAnimal(int shelterId, int animalId, string new_name, string dateOfBirth, bool isChecked, bool kidFriendly, string dateOfArrival, int new_shelterId)
         {
             Animal pickedAnimal = _dataAccess.UpdateAnimal(shelterId, animalId, new_name, dateOfBirth, isChecked, kidFriendly, dateOfArrival, new_shelterId);
@@ -134,7 +128,6 @@ namespace Shelter.MVC.Controllers
         /// <param name="dog">Attributes of the dog you want to create</param>
         /// <response code="401">Authorization required</response>
         [HttpPost("createAnimal/Dog")]
-        [Authorize]
         //Create a dog
         public IActionResult DoCreateDog(Shelter.Shared.Dog dog)
         {
@@ -146,7 +139,6 @@ namespace Shelter.MVC.Controllers
         /// <param name="other">Attributes of the other animal you want to create</param>
         /// <response code="401">Authorization required</response>
         [HttpPost("createAnimal/Other")]
-        [Authorize]
         //Create an other animal
         public IActionResult DoCreateOther(Shelter.Shared.Other other)
         {
