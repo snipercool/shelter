@@ -66,7 +66,7 @@ namespace Shelter.UnitTests
 
       var result = _controller.getThisShelterById(13);
 
-      Assert.IsInstanceOf(typeof(NotFoundResult), result);
+      Assert.IsInstanceOf(typeof(NotFoundObjectResult), result);
     }
   }
 } 
