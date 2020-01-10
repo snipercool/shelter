@@ -14,9 +14,9 @@ namespace Shelter.MVC
         Animal GetAnimalByShelterAndId(int shelterId, int animalId);
         Animal DeleteAnimal(int shelterId, int animalId);
         Animal UpdateAnimal(int shelterId, int animalId, string new_name, string dateOfBirth, bool isChecked, bool kidFriendly, string dateOfArrival, int new_shelterId);
-        Animal CreateCat(int shelterId, Shelter.Shared.Cat cat);
-        Animal CreateDog(int shelterId, Shelter.Shared.Dog dog);
-        Animal CreateOther(int shelterId, Shelter.Shared.Other other);
+        Animal CreateCat(Shelter.Shared.Cat cat);
+        Animal CreateDog(Shelter.Shared.Dog dog);
+        Animal CreateOther(Shelter.Shared.Other other);
     }
 
      public class ShelterDataAccess : IShelterDataAccess
@@ -90,7 +90,7 @@ namespace Shelter.MVC
         
         }
 
-        public Animal CreateCat(int shelterId, Shelter.Shared.Cat cat )
+        public Animal CreateCat(Shelter.Shared.Cat cat )
         {
             var newCat = new Cat {
                 name = cat.name,
@@ -98,7 +98,7 @@ namespace Shelter.MVC
                 IsChecked = cat.IsChecked,
                 KidFriendly = cat.KidFriendly,
                 DateOfArrival = cat.DateOfArrival,
-                ShelterId = shelterId,
+                ShelterId = cat.ShelterId,
                 Declawed = cat.Declawed, 
                 Race = cat.Race};
             _context.Add(newCat);
@@ -107,7 +107,7 @@ namespace Shelter.MVC
             return newCat;
         }
 
-        public Animal CreateDog(int shelterId, Shelter.Shared.Dog dog )
+        public Animal CreateDog(Shelter.Shared.Dog dog )
         {
             var newDog = new Dog {
                 name = dog.name,
@@ -115,7 +115,7 @@ namespace Shelter.MVC
                 IsChecked = dog.IsChecked,
                 KidFriendly = dog.KidFriendly,
                 DateOfArrival = dog.DateOfArrival,
-                ShelterId = shelterId,
+                ShelterId = dog.ShelterId,
                 Barker = dog.Barker, 
                 Race = dog.Race};
             _context.Add(newDog);
@@ -124,7 +124,7 @@ namespace Shelter.MVC
             return newDog;
         }
 
-        public Animal CreateOther(int shelterId, Shelter.Shared.Other other )
+        public Animal CreateOther(Shelter.Shared.Other other )
         {
             var newOther = new Other {
                 name = other.name,
@@ -132,7 +132,7 @@ namespace Shelter.MVC
                 IsChecked = other.IsChecked,
                 KidFriendly = other.KidFriendly,
                 DateOfArrival = other.DateOfArrival,
-                ShelterId = shelterId,
+                ShelterId = other.ShelterId,
                 Description = other.Description, 
                 Kind = other.Kind};
             _context.Add(newOther);

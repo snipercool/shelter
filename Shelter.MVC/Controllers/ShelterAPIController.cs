@@ -50,7 +50,6 @@ namespace Shelter.MVC.Controllers
         /// <response code="401">Authorization required</response>
         /// <response code="404">Item not found</response>  
         [HttpGet("shelter/{shelterId}")]
-        [Authorize]
         //show 1 specific shelters name and id
         public IActionResult getThisShelterById(int shelterId)
         {
@@ -121,41 +120,37 @@ namespace Shelter.MVC.Controllers
         }
 
         /// <summary>Create a cat</summary>
-        /// <param name="shelterId">ID of the shelter in which the animal should be created</param>
         /// <param name="cat">Attributes of the cat you want to create</param>
         /// <response code="401">Authorization required</response>
-        [HttpPost("createAnimal/{ShelterId}/Cat")]
-        [Authorize]
+        [HttpPost("createAnimal/Cat")]
         //Create an cat
-        public IActionResult DoCreateCat(int shelterId, Shelter.Shared.Cat cat)
+        public IActionResult DoCreateCat(Shelter.Shared.Cat cat)
         {
-            Animal createdAnimal = _dataAccess.CreateCat(shelterId, cat);
+            Animal createdAnimal = _dataAccess.CreateCat(cat);
             return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
         }
 
         /// <summary>Create a dog</summary>
-        /// <param name="shelterId">ID of the shelter in which the animal should be created</param>
         /// <param name="dog">Attributes of the dog you want to create</param>
         /// <response code="401">Authorization required</response>
-        [HttpPost("createAnimal/{ShelterId}/Dog")]
+        [HttpPost("createAnimal/Dog")]
         [Authorize]
         //Create a dog
-        public IActionResult DoCreateDog(int shelterId, Shelter.Shared.Dog dog)
+        public IActionResult DoCreateDog(Shelter.Shared.Dog dog)
         {
-            Animal createdAnimal = _dataAccess.CreateDog(shelterId, dog);
+            Animal createdAnimal = _dataAccess.CreateDog(dog);
             return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
         }
 
         /// <summary>Create a different animal from cat/dog</summary>
-        /// <param name="shelterId">ID of the shelter in which the animal should be created</param>
         /// <param name="other">Attributes of the other animal you want to create</param>
         /// <response code="401">Authorization required</response>
-        [HttpPost("createAnimal/{ShelterId}/Other")]
+        [HttpPost("createAnimal/Other")]
         [Authorize]
         //Create an other animal
-        public IActionResult DoCreateOther(int shelterId, Shelter.Shared.Other other)
+        public IActionResult DoCreateOther(Shelter.Shared.Other other)
         {
-            Animal createdAnimal = _dataAccess.CreateOther(shelterId, other);
+            Animal createdAnimal = _dataAccess.CreateOther(other);
             return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
         }
     }
