@@ -51,9 +51,10 @@ namespace Shelter.MVC
                     Type = SecuritySchemeType.OAuth2,
                     Flows = new OpenApiOAuthFlows
                     {
-                        ClientCredentials = new OpenApiOAuthFlow
+                        AuthorizationCode = new OpenApiOAuthFlow
                         {
-                            AuthorizationUrl = new Uri("/auth-server/connect/authorize", UriKind.Relative),
+                            TokenUrl = new Uri("https://dev-4t6ikzdl.auth0.com/oauth/token", UriKind.Absolute),
+                            AuthorizationUrl = new Uri("https://dev-4t6ikzdl.auth0.com/authorize", UriKind.Absolute),
                             Scopes = new Dictionary<string, string>
                             {
                                 { "read:animals", "" },
