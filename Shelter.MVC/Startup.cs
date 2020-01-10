@@ -44,7 +44,7 @@ namespace Shelter.MVC
             
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("read:messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:messages", domain)));
+                options.AddPolicy("read:shelters", policy => policy.Requirements.Add(new HasScopeRequirement("read:shelters", domain)));
             });
             services.AddAuthorization(options =>
             {
