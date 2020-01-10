@@ -13,7 +13,7 @@ using Shelter.Shared;
 namespace Shelter.MVC.Controllers
 {
     [Route("/api")]
-    public class ShelterAPIController : Controller 
+    public class ShelterAPIController : Controller
     {
         private readonly IShelterDataAccess _dataAccess;
         private readonly ILogger<ShelterAPIController> _logger;
@@ -23,22 +23,31 @@ namespace Shelter.MVC.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpGet("shelters")]
         [Authorize]
         // show all shelters name and id's
-        public IActionResult GetAllShelters() 
+        public IActionResult GetAllShelters()
         {
             return Ok(_dataAccess.GetAllShelters());
         }
 
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpGet("sheltersFull")]
         [Authorize]
         // show all shelters full with employees and animals
-        public IActionResult GetAllSheltersFull() 
+        public IActionResult GetAllSheltersFull()
         {
             return Ok(_dataAccess.GetAllSheltersFull());
         }
-
+        
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpGet("shelter/{shelterId}")]
         [Authorize]
         //show 1 specific shelters name and id
@@ -48,6 +57,9 @@ namespace Shelter.MVC.Controllers
             return shelter == default(Shared.Shelter) ? (IActionResult)NotFound("No shelter found with these parameters") : Ok(shelter);
         }
 
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpGet("shelter/{shelterId}/animal/{animalId}")]
         [Authorize]
         //show all info about 1 specific animal by using it's id and shelter it resides in
@@ -57,6 +69,9 @@ namespace Shelter.MVC.Controllers
             return animal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(animal);
         }
 
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpGet("showAnimals/{shelterId}")]
         [Authorize]
         //show all animals from 1 specific shelter
@@ -66,25 +81,34 @@ namespace Shelter.MVC.Controllers
             return animals == default(IEnumerable<Animal>) ? (IActionResult)NotFound("No animals found with these parameters") : Ok(animals);
         }
 
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpDelete("deleteAnimal/{animalId}/{shelterId}")]
         [Authorize]
         public IActionResult DoDeleteAnimal(int shelterId, int animalId)
         {
             Animal pickedAnimal = _dataAccess.DeleteAnimal(shelterId, animalId);
-            
+
             return pickedAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(pickedAnimal);
-            
+
         }
 
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpPut("updateAnimal/{animalId}/{shelterId}")]
         [Authorize]
         public IActionResult DoUpdateAnimal(int shelterId, int animalId, string new_name, string dateOfBirth, bool isChecked, bool kidFriendly, string dateOfArrival, int new_shelterId)
         {
             Animal pickedAnimal = _dataAccess.UpdateAnimal(shelterId, animalId, new_name, dateOfBirth, isChecked, kidFriendly, dateOfArrival, new_shelterId);
 
-             return pickedAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(pickedAnimal);
+            return pickedAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(pickedAnimal);
         }
-
+        
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpPost("createAnimal/{ShelterId}/Cat")]
         [Authorize]
         //Create an cat
@@ -94,6 +118,9 @@ namespace Shelter.MVC.Controllers
             return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
         }
 
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpPost("createAnimal/{ShelterId}/Dog")]
         [Authorize]
         //Create a dog
@@ -102,7 +129,10 @@ namespace Shelter.MVC.Controllers
             Animal createdAnimal = _dataAccess.CreateDog(ShelterId, dog);
             return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
         }
-        
+
+        /// <summary>
+        /// Shows all shelters
+        /// </summary>
         [HttpPost("createAnimal/{ShelterId}/Others")]
         [Authorize]
         //Create an other animal

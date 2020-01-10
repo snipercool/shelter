@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Reflection;
+using System.IO;
 
 namespace Shelter.MVC
 {
@@ -30,7 +32,20 @@ namespace Shelter.MVC
         {
             string domain = $"https://{Configuration["Auth0:Domain"]}/";
             services.AddScoped<IShelterDataAccess, ShelterDataAccess>();
-            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Shelter API", Version = "v1" }); });
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "Shelter API",
+                    Version = "v1",
+                    Description = "ASP.NET Core Web API for our shelter"
+                });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+
+            });
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -41,7 +56,7 @@ namespace Shelter.MVC
                 options.Authority = domain;
                 options.Audience = Configuration["Auth0:ApiIdentifier"];
             });
-            
+
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("read:shelters", policy => policy.Requirements.Add(new HasScopeRequirement("read:shelters", domain)));
@@ -53,12 +68,12 @@ namespace Shelter.MVC
 
             // register the scope authorization handler
             services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
-            
+
             services.AddControllersWithViews();
             services.AddDbContext<ShelterContext>(options => options.UseSqlite(Configuration.GetConnectionString("ShelterContext")));
             services.AddScoped<IDatabaseInitializer, DatabaseInitializer>();
 
-             services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddMvc(option => option.EnableEndpointRouting = false);
 
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -99,9 +114,9 @@ namespace Shelter.MVC
 
             app.UseMvc(routes =>
             {
-            routes.MapRoute(
-              name: "default",
-              template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                  name: "default",
+                  template: "{controller=Home}/{action=Index}/{id?}");
             });
             databaseInitializer.Initialize();
         }
