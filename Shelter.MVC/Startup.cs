@@ -51,10 +51,29 @@ namespace Shelter.MVC
                     Type = SecuritySchemeType.OAuth2,
                     Flows = new OpenApiOAuthFlows
                     {
-                        Implicit = new OpenApiOAuthFlow
+                        ClientCredentials = new OpenApiOAuthFlow
                         {
                             AuthorizationUrl = new Uri("/auth-server/connect/authorize", UriKind.Relative),
+                            Scopes = new Dictionary<string, string>
+                            {
+                                { "read:animals", "" },
+                                { "read:shelters", "" },
+                                { "delete:animal", "" },
+                                { "edit:animal", "" },
+                                { "create:animal", "" },
+                            }
                         }
+                    }
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "oauth2" }
+                        },
+                        new[] {"read:animals", "read:shelters", "delete:animal", "edit:animal", "create:animal"}
                     }
                 });
 
@@ -107,6 +126,8 @@ namespace Shelter.MVC
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
+                c.OAuthClientId("JzclweYI3P54FBUV4f8siUuPYibtilRB");
+                c.OAuthClientSecret("b3CxcLiuNO2lEJc8gMbNdHQPzf4Vz0cZQue6JvN5VNR3L8ZjXhwuOYI5QfnHX8QH");
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Shelter API");
                 c.RoutePrefix = string.Empty;
             });
