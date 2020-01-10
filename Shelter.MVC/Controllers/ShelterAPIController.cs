@@ -126,7 +126,7 @@ namespace Shelter.MVC.Controllers
         [HttpPost("createAnimal/Cat")]
         //[Authorize]
         //Create an cat
-        public IActionResult DoCreateCat([FromBody]Shelter.Shared.Cat cat)
+        public IActionResult DoCreateCat(Shelter.Shared.Cat cat)
         {
             Animal createdAnimal = _dataAccess.CreateCat(cat);
             return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
@@ -138,7 +138,7 @@ namespace Shelter.MVC.Controllers
         [HttpPost("createAnimal/Dog")]
         //[Authorize]
         //Create a dog
-        public IActionResult DoCreateDog([FromBody]Shelter.Shared.Dog dog)
+        public IActionResult DoCreateDog(Shelter.Shared.Dog dog)
         {
             Animal createdAnimal = _dataAccess.CreateDog(dog);
             return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
@@ -150,7 +150,7 @@ namespace Shelter.MVC.Controllers
         [HttpPost("createAnimal/Other")]
         //[Authorize]
         //Create an other animal
-        public IActionResult DoCreateOther([FromBody]Shelter.Shared.Other other)
+        public IActionResult DoCreateOther(Shelter.Shared.Other other)
         {
             Animal createdAnimal = _dataAccess.CreateOther(other);
             return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
