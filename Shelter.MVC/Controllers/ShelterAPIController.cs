@@ -34,7 +34,7 @@ namespace Shelter.MVC.Controllers
             return Ok(_dataAccess.GetAllShelters());
         }
 
-        /// <summary> Shows all shelters (with animals/employees</summary>
+        /// <summary> Shows all shelters (with animals/employees)</summary>
         /// <response code="401">Authorization required</response>
         /// <response code="404">Item not found</response>  
         [HttpGet("sheltersFull")]
@@ -126,7 +126,7 @@ namespace Shelter.MVC.Controllers
         [HttpPost("createAnimal/Cat")]
         //[Authorize]
         //Create an cat
-        public IActionResult DoCreateCat(Shelter.Shared.Cat cat)
+        public IActionResult DoCreateCat([FromBody]Shelter.Shared.Cat cat)
         {
             Animal createdAnimal = _dataAccess.CreateCat(cat);
             return createdAnimal == default(Shared.Animal) ? (IActionResult)NotFound("No animal found with these parameters") : Ok(createdAnimal);
