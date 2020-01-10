@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Reflection;
 using System.IO;
+using Microsoft.OpenApi.Models;
 
 namespace Shelter.MVC
 {
@@ -44,6 +45,19 @@ namespace Shelter.MVC
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
+
+                c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.OAuth2,
+                    Flows = new OpenApiOAuthFlows
+                    {
+                        Implicit = new OpenApiOAuthFlow
+                        {
+                            AuthorizationUrl = new Uri("/auth-server/connect/authorize", UriKind.Relative),
+                        }
+                    }
+                });
+
 
             });
             services.AddAuthentication(options =>
